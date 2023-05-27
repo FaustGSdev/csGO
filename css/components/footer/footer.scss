@@ -1,0 +1,51 @@
+@import "../../_helpers/variables";
+
+footer {
+  margin-top: auto;
+  padding: 20px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  p {
+    margin: 0;
+  }
+
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .info {
+    width: 46.8%;
+  }
+  .panel {
+    margin: 0;
+    padding: 0 10px;
+    list-style: none;
+    li {
+      &+li {
+        margin-top: 10px;
+      }
+    }
+  }
+  .copy-box {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    .pay-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 17px;
+      img {
+        display: block;
+        &+img {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+* {
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+  html h1, html h2, html h3, html h4, html h5, html h6 {
+    margin: 0; }
+  html h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #FFFFFF; }
+  html h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #FFFFFF; }
+    html h2.big {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 42px;
+      text-transform: uppercase;
+      color: #FFFFFF; }
+  html h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #FFFFFF; }
+    html h3.small {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: #FFFFFF; }
+  html h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-transform: uppercase; }
+    html h4 a {
+      text-decoration: underline;
+      font-weight: 400;
+      text-transform: none; }
+      html h4 a:hover {
+        text-decoration: none; }
+  html .text-uppercase {
+    text-transform: uppercase; }
+  html .text-bold {
+    font-weight: 700; }
+  html body {
+    background: #0D1525 url("../image/bg.jpg") no-repeat 50% 0 fixed;
+    background-size: cover;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden; }
+
+.holder {
+  overflow: hidden; }
+
+a {
+  color: #5397FD;
+  text-decoration: none;
+  position: relative;
+  transition: all linear 0.4s; }
+  a:hover {
+    text-decoration: underline; }
+  a.link {
+    color: #FFFFFF;
+    text-decoration: none; }
+    a.link:after {
+      width: 0;
+      height: 1px;
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      background: #5397FD;
+      transition: all linear 0.4s; }
+    a.link.active, a.link:hover {
+      text-decoration: none; }
+      a.link.active:after, a.link:hover:after {
+        width: 100%; }
+
+.wrapper {
+  overflow: hidden;
+  flex-grow: 2;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 20px; }
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  word-break: break-all; }
+
+ul, li {
+  list-style-type: none; }
+
+.flex {
+  display: flex; }
+
+.flex-wrap {
+  flex-wrap: wrap; }
+
+.f-align-center {
+  align-items: center; }
+
+.f-align-end {
+  align-items: flex-end; }
+
+.f-align-start {
+  align-items: flex-start; }
+
+.f-content-end {
+  justify-content: flex-end; }
+
+.f-content-start {
+  justify-content: flex-start; }
+
+.f-content-start-i {
+  justify-content: flex-start !important; }
+
+.f-space-between {
+  justify-content: space-between; }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.flex-center-i {
+  display: flex !important;
+  align-items: center;
+  justify-content: center; }
+
+.flex-1 {
+  flex: 1; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left !important; }
+
+.m-y-auto {
+  margin-top: auto;
+  margin-bottom: auto; }
+
+.mt0i {
+  margin-top: 0px !important; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.mt20i {
+  margin-top: 20px !important; }
+
+.mb10 {
+  margin-bottom: 10px; }
+
+.mb15 {
+  margin-bottom: 15px; }
+
+.mb25 {
+  margin-bottom: 25px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mt35 {
+  margin-top: 35px; }
+
+.mb20 {
+  margin-bottom: 20px; }
+
+.mb30 {
+  margin-bottom: 30px; }
+
+.mb35 {
+  margin-bottom: 35px; }
+
+.mb40 {
+  margin-bottom: 40px; }
+
+.mb45 {
+  margin-bottom: 45px; }
+
+.mb60 {
+  margin-bottom: 60px; }
+
+.m-0-auto {
+  margin: 0 auto !important; }
+
+a {
+  cursor: pointer; }
+
+.opacity-50 {
+  opacity: .5; }
+
+ul, ol {
+  padding: 0;
+  margin: 0; }
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px !important;
+  width: 100%;
+  margin: 0 auto; }
+  @media only screen and (min-width: 1230px) {
+    .container {
+      padding-left: 0px !important;
+      padding-right: 0px !important; } }
+
+.head-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.column-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  @media only screen and (max-width: 991px) {
+    .column-box {
+      flex-direction: column; } }
+
+.d-none {
+  display: none !important; }
+
+.scroll-wrapper {
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: relative; }
+
+.scroll-wrapper > .scroll-content {
+  border: none !important;
+  box-sizing: content-box !important;
+  height: auto;
+  left: 0;
+  margin: 0;
+  max-height: none;
+  max-width: none !important;
+  overflow: scroll !important;
+  padding: 0;
+  position: relative !important;
+  top: 0; }
+
+.scroll-wrapper > .scroll-content::-webkit-scrollbar {
+  height: 0;
+  width: 0; }
+
+.scroll-element div {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 10; }
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+  display: block; }
+
+.scroll-element.scroll-y.scroll-scrolly_visible {
+  border: none;
+  margin: 0;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 6px;
+  height: 100%;
+  width: 2px; }
+
+.scroll-element.scroll-x.scroll-scrollx_visible {
+  border: none;
+  margin: 0;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 35px;
+  height: 3px;
+  width: calc(100% - 70px); }
+
+.scroll-element .scroll-element_outer {
+  overflow: hidden;
+  position: relative; }
+
+.scroll-element .scroll-element_outer, .scroll-element .scroll-element_track, .scroll-element .scroll-bar {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+.scroll-element .scroll-element_track {
+  width: 100%;
+  background: rgba(19, 28, 46, 0.9); }
+
+.scroll-element .scroll-bar {
+  background: #5397FD;
+  border-radius: 10px;
+  width: 100%; }
+
+*:focus-visible {
+  outline: none !important; }
+
+hr {
+  margin: 0 0 20px;
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05); }
+
+.ref-box hr {
+  margin: 30px 0; }
+
+.box {
+  padding: 30px;
+  margin-top: 20px;
+  background: rgba(19, 28, 46, 0.9);
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF; }
+  .box.ref-box {
+    background: rgba(19, 28, 46, 0.9) url("../image/bg-ref.png") no-repeat 50% 0; }
+    .box.ref-box.no-bg {
+      background: rgba(19, 28, 46, 0.9); }
+
+.title-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.w100 {
+  width: 100% !important; }
+
+/*# sourceMappingURL=general.css.map */

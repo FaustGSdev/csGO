@@ -1,0 +1,36 @@
+footer {
+  margin-top: auto;
+  padding: 20px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF; }
+  footer p {
+    margin: 0; }
+  footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  footer .info {
+    width: 46.8%; }
+  footer .panel {
+    margin: 0;
+    padding: 0 10px;
+    list-style: none; }
+    footer .panel li + li {
+      margin-top: 10px; }
+  footer .copy-box {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF; }
+    footer .copy-box .pay-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 17px; }
+      footer .copy-box .pay-box img {
+        display: block; }
+        footer .copy-box .pay-box img + img {
+          margin-left: 10px; }
+
+/*# sourceMappingURL=footer.css.map */

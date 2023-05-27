@@ -1,0 +1,114 @@
+.tabs-container .tab-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1px; }
+  .tabs-container .tab-nav .item {
+    cursor: pointer;
+    background: rgba(19, 28, 46, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #5397FD;
+    text-align: center;
+    width: 100%;
+    padding: 20px 10px;
+    position: relative; }
+    @media only screen and (max-width: 1199px) {
+      .tabs-container .tab-nav .item {
+        font-size: 14px;
+        line-height: 16px; } }
+    .tabs-container .tab-nav .item:first-child {
+      border-radius: 20px 0 0 0; }
+    .tabs-container .tab-nav .item:last-child {
+      border-radius: 0 20px 0 0; }
+    .tabs-container .tab-nav .item:after {
+      display: none;
+      content: '';
+      height: 1px;
+      width: 100%;
+      background: rgba(19, 28, 46, 0.9);
+      position: absolute;
+      top: 100%;
+      left: 0; }
+    .tabs-container .tab-nav .item.active {
+      background: linear-gradient(168deg, rgba(83, 151, 253, 0.85) 0%, rgba(19, 28, 46, 0.1) 51%), rgba(19, 28, 46, 0.9); }
+      .tabs-container .tab-nav .item.active:after {
+        display: block; }
+    .tabs-container .tab-nav .item .name {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center; }
+      @media only screen and (max-width: 1199px) {
+        .tabs-container .tab-nav .item .name {
+          font-size: 16px;
+          line-height: 19px; } }
+      .tabs-container .tab-nav .item .name .ico {
+        display: block;
+        margin-right: 5px; }
+      .tabs-container .tab-nav .item .name svg {
+        display: block; }
+    .tabs-container .tab-nav .item .price {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      color: #5397FD;
+      display: block; }
+      @media only screen and (max-width: 1199px) {
+        .tabs-container .tab-nav .item .price {
+          font-size: 14px;
+          line-height: 16px; } }
+    .tabs-container .tab-nav .item .info {
+      position: absolute;
+      bottom: 6px;
+      right: 5px;
+      padding: 3px 5px;
+      background: linear-gradient(180deg, #2D384D 0%, #131C2E 100%);
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: #FFFFFF; }
+.tabs-container .tab-content {
+  display: none;
+  padding: 30px;
+  background: rgba(19, 28, 46, 0.9);
+  border-radius: 0px 0px 20px 20px; }
+  .tabs-container .tab-content.active {
+    display: block; }
+
+.tab-nav-wallet {
+  display: flex;
+  margin-bottom: 20px; }
+  .tab-nav-wallet .item {
+    flex: 1 0 auto;
+    background: rgba(19, 28, 46, 0.01);
+    box-shadow: inset 0px -2px 0px rgba(255, 255, 255, 0.05);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all linear 0.4s;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px; }
+    .tab-nav-wallet .item:hover {
+      color: #FFFFFF; }
+    .tab-nav-wallet .item.active {
+      color: #FFFFFF;
+      box-shadow: inset 0px -2px 0px #5397FD; }
+
+.tab-content-wallet {
+  display: none; }
+  .tab-content-wallet.active {
+    display: block; }
+
+/*# sourceMappingURL=tabs.css.map */

@@ -1,0 +1,256 @@
+@import "../../_helpers/variables";
+
+.chat-box {
+    position: fixed;
+    right: -295px;
+    top: 90px;
+    height: calc(100vh - 148px);
+    min-height: 270px;
+    background: rgba(19, 28, 46, 0.9);
+    border-radius: 20px 0px 0px 20px;
+    width: 295px;
+    z-index: 100;
+    padding: 20px 0;
+    transition: all linear 0.4s;
+    @media only screen and (max-height : 510px) {
+        height: 100vh;
+        top: 0;
+    }
+    &.active {
+        right: 0;
+    }
+    .head {
+        padding: 0 19px 20px;
+        position: relative;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        margin-bottom: 20px;
+        z-index: 100;
+        h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            svg {
+                display: block;
+                margin-right: 10px;
+            }
+        }
+        .hide {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 19px;
+            svg {
+                display: block;
+            }
+        }
+        .select-box {
+            margin-top: 20px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 0 20px;
+            position: relative;
+            .check {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                height: 40px;
+                .name {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #FFFFFF;
+                    .ico {
+                        display: block;
+                        width: 14px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin-right: 5px;
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                .status {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: #FFFFFF;
+                    margin-left: auto;
+                    .ico {
+                        width: 6px;
+                        height: 6px;
+                        background: #39B254;
+                        box-shadow: 0px 0px 15px #39B254;
+                        display: block;
+                        margin-right: 5px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                    }
+                }
+                .ico-drop {
+                    margin-left: 14px;
+                    display: block;
+                    transition: all linear 0.4s;
+                    svg {
+                        display: block;
+                    }
+                }
+            }
+            .drop {
+                position: absolute;
+                top: calc(100% + 1px);
+                background: #252C3F;
+                border-radius: 10px;
+                padding: 12px 20px;
+                width: 100%;
+                left: 0;
+                display: none;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    &+.item {
+                        margin-top: 10px;
+                        padding-top: 10px;
+                        border-top: 1px solid rgba(255, 255, 255, 0.1);
+                    }
+                    .name {
+                        display: flex;
+                        align-items: center;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #FFFFFF;
+                        .ico {
+                            display: block;
+                            width: 14px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            margin-right: 5px;
+                            img {
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                    .status {
+                        display: flex;
+                        align-items: center;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #FFFFFF;
+                        margin-left: auto;
+                        .ico {
+                            width: 6px;
+                            height: 6px;
+                            background: #39B254;
+                            box-shadow: 0px 0px 15px #39B254;
+                            display: block;
+                            margin-right: 5px;
+                            overflow: hidden;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            &.open {
+                .check {
+                    .ico-drop {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+    .bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 20px 20px 0;
+        text-align: center;
+        margin-top: 20px;
+        .balance {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            color: #FFFFFF;
+            p {
+                margin: 0 0 10px;
+            }
+        }
+    }
+    .chat-content {
+        min-height: 100px;
+        height: calc(100% - 266px);
+        position: relative;
+        & > .message-list {
+            height: 100%;
+            overflow: auto;
+        }
+        .item {
+            padding: 0 20px;
+            //display: inline-flex;
+            vertical-align: middle;
+            overflow: hidden;
+            &+.item {
+                padding-top: 20px;
+            }
+            .user {
+                //display: flex;
+                //align-items: center;
+                vertical-align: middle;
+                overflow: hidden;
+                .img {
+                    width: 20px;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    //display: inline-block;
+
+                    display: block;
+                    float: left;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+
+                        float: left;
+                    }
+                }
+                .name {
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 15px;
+                    color: #FFFFFF;
+                    display: inline-block;
+                    margin-right: 10px;
+
+                    float: left;
+                    padding-top: 3px;
+                }
+            }
+            .text {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: rgba(255, 255, 255, 0.5);
+                vertical-align: middle;
+            }
+        }
+    }
+}

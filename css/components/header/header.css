@@ -1,0 +1,398 @@
+header {
+  padding: 0;
+  background: #131C2E;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center; }
+  @media only screen and (max-width: 991px) {
+    header {
+      padding: 10px 0; } }
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    height: 100%; }
+  header .btn {
+    width: auto; }
+  header .nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 253px);
+    height: 100%; }
+    @media only screen and (max-width: 991px) {
+      header .nav {
+        display: none;
+        height: initial;
+        position: absolute;
+        width: 223px;
+        right: 15px;
+        top: calc(100% + 10px);
+        background: #131C2E;
+        box-shadow: inset 0px 1px 0px #5397FD;
+        border-radius: 0px 0px 20px 20px; } }
+    header .nav > li {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      flex-grow: 1;
+      position: relative; }
+      @media only screen and (max-width: 991px) {
+        header .nav > li + li {
+          border-top: 1px solid rgba(255, 255, 255, 0.05); } }
+      header .nav > li:before {
+        position: absolute;
+        height: 100%;
+        width: 3px;
+        display: block;
+        content: '';
+        background: rgba(0, 0, 0, 0.1);
+        top: 0;
+        left: -1px; }
+        @media only screen and (max-width: 991px) {
+          header .nav > li:before {
+            display: none; } }
+      header .nav > li:last-child:after {
+        position: absolute;
+        height: 100%;
+        width: 3px;
+        display: block;
+        content: '';
+        background: rgba(0, 0, 0, 0.1);
+        top: 0;
+        right: -1px; }
+        @media only screen and (max-width: 991px) {
+          header .nav > li:last-child:after {
+            display: none; } }
+      header .nav > li.drop.active > a, header .nav > li.drop:hover > a {
+        color: #5397FD;
+        text-decoration: none; }
+        header .nav > li.drop.active > a svg path, header .nav > li.drop:hover > a svg path {
+          stroke: #5397FD; }
+      header .nav > li.drop.active > a {
+        color: #fff; }
+        header .nav > li.drop.active > a svg {
+          transform: rotate(180deg); }
+      header .nav > li .drop-menu {
+        padding: 12px 20px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #252C3F;
+        border-radius: 10px;
+        margin: 0;
+        list-style: none;
+        width: 257px;
+        display: none; }
+        header .nav > li .drop-menu.lang-drop {
+          padding: 12px 0;
+          width: 50px; }
+        header .nav > li .drop-menu li {
+          margin-top: 15px;
+          padding-top: 15px;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          text-align: center; }
+          header .nav > li .drop-menu li:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none; }
+          header .nav > li .drop-menu li a {
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center; }
+            header .nav > li .drop-menu li a:hover {
+              color: #5397FD;
+              text-decoration: none; }
+            header .nav > li .drop-menu li a.lang {
+              width: 14px;
+              height: 14px;
+              overflow: hidden;
+              border-radius: 50%; }
+              header .nav > li .drop-menu li a.lang img {
+                display: block;
+                width: 100%;
+                height: auto; }
+      header .nav > li > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        height: 100%;
+        width: 100%;
+        min-height: 60px;
+        transition: all linear 0.4s; }
+        @media only screen and (max-width: 991px) {
+          header .nav > li > a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 20px;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #FFFFFF; }
+            header .nav > li > a:hover {
+              color: #5397FD;
+              text-decoration: none; } }
+        header .nav > li > a span {
+          display: flex;
+          align-items: center;
+          margin: 0 10px; }
+          header .nav > li > a span.lang {
+            width: 20px;
+            height: 20px;
+            overflow: hidden;
+            border-radius: 50%; }
+            header .nav > li > a span.lang img {
+              display: block;
+              width: 100%;
+              height: auto; }
+        header .nav > li > a img,
+        header .nav > li > a svg {
+          display: block;
+          transition: all linear 0.4s; }
+          header .nav > li > a img path,
+          header .nav > li > a svg path {
+            transition: all linear 0.4s; }
+        header .nav > li > a:hover, header .nav > li > a.active {
+          color: #5397FD;
+          text-decoration: none; }
+          header .nav > li > a:hover svg path, header .nav > li > a.active svg path {
+            stroke: #5397FD; }
+  header .logo {
+    display: block;
+    text-decoration: none;
+    margin-right: 15px;
+    width: 68px; }
+    @media only screen and (max-width: 991px) {
+      header .logo {
+        margin: 0 auto;
+        order: 2; } }
+    header .logo img {
+      display: block; }
+  header .drop-lang {
+    display: flex;
+    align-items: center;
+    position: relative; }
+    header .drop-lang > a {
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 0 10px;
+      height: 40px;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #FFFFFF; }
+      header .drop-lang > a .lang {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        border-radius: 50%; }
+        header .drop-lang > a .lang img {
+          display: block;
+          width: 100%;
+          height: auto; }
+      header .drop-lang > a svg {
+        display: block;
+        margin-left: 5px; }
+    header .drop-lang img {
+      display: block; }
+    header .drop-lang.active > a, header .drop-lang:hover > a {
+      color: #5397FD;
+      text-decoration: none; }
+      header .drop-lang.active > a svg path, header .drop-lang:hover > a svg path {
+        stroke: #5397FD; }
+    header .drop-lang.active > a {
+      color: #fff; }
+      header .drop-lang.active > a svg {
+        transform: rotate(180deg); }
+    header .drop-lang .lang-list {
+      padding: 12px 0;
+      width: 50px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #252C3F;
+      border-radius: 10px;
+      margin: 0;
+      list-style: none;
+      display: none; }
+      header .drop-lang .lang-list li {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center; }
+        header .drop-lang .lang-list li:first-child {
+          margin-top: 0;
+          padding-top: 0;
+          border-top: none; }
+        header .drop-lang .lang-list li a {
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 15px;
+          text-transform: uppercase;
+          color: #FFFFFF;
+          display: flex;
+          overflow: hidden;
+          align-items: center;
+          justify-content: center; }
+          header .drop-lang .lang-list li a:hover {
+            color: #5397FD;
+            text-decoration: none; }
+          header .drop-lang .lang-list li a.lang {
+            width: 14px;
+            height: 14px;
+            overflow: hidden;
+            border-radius: 50%; }
+            header .drop-lang .lang-list li a.lang img {
+              display: block;
+              width: 100%;
+              height: auto; }
+  header .control-box {
+    display: flex;
+    align-items: center;
+    margin-left: 15px; }
+    @media only screen and (max-width: 991px) {
+      header .control-box {
+        margin-left: 0;
+        order: 1;
+        min-width: 130px; } }
+    header .control-box .btn {
+      width: 40px;
+      border-radius: 50%;
+      margin-left: 5px; }
+      header .control-box .btn.sound-btn .on {
+        display: block; }
+      header .control-box .btn.sound-btn .off {
+        display: none; }
+      header .control-box .btn.sound-btn.active-off .on {
+        display: none; }
+      header .control-box .btn.sound-btn.active-off .off {
+        display: block; }
+  header .currency-box {
+    position: relative; }
+    header .currency-box.active > .btn {
+      color: #5397FD; }
+      header .currency-box.active > .btn svg path {
+        stroke: #5397FD; }
+    header .currency-box .currency-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 5px 0 0;
+      margin: 0;
+      list-style: none;
+      display: none; }
+      header .currency-box .currency-list li + li {
+        margin-top: 5px; }
+  header .profile-holder {
+    display: flex;
+    align-items: center;
+    margin-left: 15px; }
+    @media only screen and (max-width: 991px) {
+      header .profile-holder {
+        margin: 0;
+        order: 3;
+        min-width: 130px; } }
+  header .user-control {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    min-width: 175px; }
+    header .user-control a {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #5397FD;
+      display: block; }
+      header .user-control a:hover {
+        color: #fff;
+        text-decoration: none; }
+    header .user-control .sum {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: #FFFFFF;
+      margin-left: 5px; }
+      header .user-control .sum svg {
+        display: block;
+        margin-right: 10px; }
+  header .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px; }
+    header .profile img {
+      display: block;
+      width: 100%;
+      height: auto; }
+  header .profile-drop {
+    position: absolute;
+    width: 223px;
+    right: 0;
+    top: 100%;
+    background: #131C2E;
+    box-shadow: inset 0px 1px 0px #5397FD;
+    border-radius: 0px 0px 20px 20px;
+    display: none; }
+    header .profile-drop .item + .item {
+      border-top: 1px solid rgba(255, 255, 255, 0.05); }
+    header .profile-drop .item a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 20px;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #FFFFFF; }
+      header .profile-drop .item a:hover {
+        color: #5397FD;
+        text-decoration: none; }
+      header .profile-drop .item a svg {
+        display: block;
+        margin-left: 10px; }
+
+/*# sourceMappingURL=header.css.map */

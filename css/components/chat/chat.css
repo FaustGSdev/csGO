@@ -1,0 +1,208 @@
+.chat-box {
+  position: fixed;
+  right: -295px;
+  top: 90px;
+  height: calc(100vh - 148px);
+  min-height: 270px;
+  background: rgba(19, 28, 46, 0.9);
+  border-radius: 20px 0px 0px 20px;
+  width: 295px;
+  z-index: 100;
+  padding: 20px 0;
+  transition: all linear 0.4s; }
+  @media only screen and (max-height: 510px) {
+    .chat-box {
+      height: 100vh;
+      top: 0; } }
+  .chat-box.active {
+    right: 0; }
+  .chat-box .head {
+    padding: 0 19px 20px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 20px;
+    z-index: 100; }
+    .chat-box .head h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: #FFFFFF; }
+      .chat-box .head h2 svg {
+        display: block;
+        margin-right: 10px; }
+    .chat-box .head .hide {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 19px; }
+      .chat-box .head .hide svg {
+        display: block; }
+    .chat-box .head .select-box {
+      margin-top: 20px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 0 20px;
+      position: relative; }
+      .chat-box .head .select-box .check {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        height: 40px; }
+        .chat-box .head .select-box .check .name {
+          display: flex;
+          align-items: center;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: #FFFFFF; }
+          .chat-box .head .select-box .check .name .ico {
+            display: block;
+            width: 14px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 5px; }
+            .chat-box .head .select-box .check .name .ico img {
+              display: block;
+              width: 100%;
+              height: auto; }
+        .chat-box .head .select-box .check .status {
+          display: flex;
+          align-items: center;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          color: #FFFFFF;
+          margin-left: auto; }
+          .chat-box .head .select-box .check .status .ico {
+            width: 6px;
+            height: 6px;
+            background: #39B254;
+            box-shadow: 0px 0px 15px #39B254;
+            display: block;
+            margin-right: 5px;
+            overflow: hidden;
+            border-radius: 50%; }
+        .chat-box .head .select-box .check .ico-drop {
+          margin-left: 14px;
+          display: block;
+          transition: all linear 0.4s; }
+          .chat-box .head .select-box .check .ico-drop svg {
+            display: block; }
+      .chat-box .head .select-box .drop {
+        position: absolute;
+        top: calc(100% + 1px);
+        background: #252C3F;
+        border-radius: 10px;
+        padding: 12px 20px;
+        width: 100%;
+        left: 0;
+        display: none; }
+        .chat-box .head .select-box .drop .item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer; }
+          .chat-box .head .select-box .drop .item + .item {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1); }
+          .chat-box .head .select-box .drop .item .name {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #FFFFFF; }
+            .chat-box .head .select-box .drop .item .name .ico {
+              display: block;
+              width: 14px;
+              border-radius: 50%;
+              overflow: hidden;
+              margin-right: 5px; }
+              .chat-box .head .select-box .drop .item .name .ico img {
+                display: block;
+                width: 100%;
+                height: auto; }
+          .chat-box .head .select-box .drop .item .status {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #FFFFFF;
+            margin-left: auto; }
+            .chat-box .head .select-box .drop .item .status .ico {
+              width: 6px;
+              height: 6px;
+              background: #39B254;
+              box-shadow: 0px 0px 15px #39B254;
+              display: block;
+              margin-right: 5px;
+              overflow: hidden;
+              border-radius: 50%; }
+      .chat-box .head .select-box.open .check .ico-drop {
+        transform: rotate(-180deg); }
+  .chat-box .bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px 20px 0;
+    text-align: center;
+    margin-top: 20px; }
+    .chat-box .bottom .balance {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: #FFFFFF; }
+      .chat-box .bottom .balance p {
+        margin: 0 0 10px; }
+  .chat-box .chat-content {
+    min-height: 100px;
+    height: calc(100% - 266px);
+    position: relative; }
+    .chat-box .chat-content > .message-list {
+      height: 100%;
+      overflow: auto; }
+    .chat-box .chat-content .item {
+      padding: 0 20px;
+      vertical-align: middle;
+      overflow: hidden; }
+      .chat-box .chat-content .item + .item {
+        padding-top: 20px; }
+      .chat-box .chat-content .item .user {
+        vertical-align: middle;
+        overflow: hidden; }
+        .chat-box .chat-content .item .user .img {
+          width: 20px;
+          overflow: hidden;
+          border-radius: 50%;
+          margin-right: 10px;
+          display: block;
+          float: left; }
+          .chat-box .chat-content .item .user .img img {
+            display: block;
+            width: 100%;
+            height: auto;
+            float: left; }
+        .chat-box .chat-content .item .user .name {
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 15px;
+          color: #FFFFFF;
+          display: inline-block;
+          margin-right: 10px;
+          float: left;
+          padding-top: 3px; }
+      .chat-box .chat-content .item .text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.5);
+        vertical-align: middle; }
+
+/*# sourceMappingURL=chat.css.map */
