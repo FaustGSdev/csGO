@@ -162,6 +162,9 @@
     color: #FFFFFF;
     min-height: 40px;
     padding: 0px 20px; }
+    @media only screen and (max-width: 767px) {
+      .btn.btn-default.btn-small, .btn.btn-primary.btn-small {
+        padding: 0 10px; } }
   .btn.btn-chat {
     background: linear-gradient(180deg, #29ACD6 0%, #494FD8 100%);
     box-shadow: 0px 4px 20px rgba(107, 128, 236, 0.5);
@@ -181,6 +184,19 @@
     right: -32px;
     width: 108px;
     z-index: 99; }
+    @media only screen and (max-width: 767px) {
+      .btn.btn-chat {
+        min-height: 30px;
+        width: 74px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 15px;
+        padding: 0 14px;
+        right: -21px; }
+        .btn.btn-chat svg {
+          margin-right: 5px; } }
+    .btn.btn-chat svg {
+      transform: rotate(90deg); }
     .btn.btn-chat.hide {
       right: -80px; }
   .btn.btn-more-message {
@@ -202,6 +218,9 @@
     border-radius: 10px;
     z-index: 10;
     width: auto; }
+    @media only screen and (max-width: 767px) {
+      .btn.btn-more-message {
+        padding: 0 10px; } }
     .btn.btn-more-message svg {
       margin: 0; }
     .btn.btn-more-message.active, .btn.btn-more-message:hover {
@@ -219,6 +238,9 @@
     @media only screen and (min-width: 1735px) {
       .btn.btn-support {
         display: flex; } }
+    @media only screen and (max-width: 767px) {
+      .btn.btn-support {
+        padding: 10px; } }
     .btn.btn-support .ico {
       margin-right: 10px;
       width: 50px;
@@ -258,6 +280,9 @@
     color: #FFFFFF;
     width: auto;
     margin: 20px auto 0; }
+    @media only screen and (max-width: 767px) {
+      .btn.btn-more {
+        padding: 0 10px; } }
   .btn.btn-select {
     width: 150px;
     position: relative;
@@ -301,7 +326,7 @@
     width: 40px;
     height: 40px;
     min-height: 40px;
-    margin-left: 5px;
+    margin-right: 20px;
     display: none; }
     @media only screen and (max-width: 991px) {
       .btn.btn-burger {

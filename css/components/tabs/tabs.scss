@@ -6,6 +6,22 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 1px;
+        &.wallet-nav {
+            .item {
+                .name {
+                    @media only screen and (max-width : $responsive-size-big-mobile) {
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                    .ico {
+                        @media only screen and (max-width : $responsive-size-big-mobile) {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
         .item {
             cursor: pointer;
             background: rgba(19, 28, 46, 0.9);
@@ -61,9 +77,17 @@
                     font-size: 16px;
                     line-height: 19px;
                 }
+                .text {
+                    @media only screen and (max-width : $responsive-size-big-mobile) {
+                        display: none;
+                    }
+                }
                 .ico {
                     display: block;
                     margin-right: 5px;
+                    @media only screen and (max-width : $responsive-size-big-mobile) {
+                        margin-right: 0;
+                    }
                 }
                 svg {
                     display: block;
@@ -79,6 +103,9 @@
                     font-size: 14px;
                     line-height: 16px;
                 }
+                @media only screen and (max-width : $responsive-size-big-mobile) {
+                    display: none;
+                }
             }
             .info {
                 position: absolute;
@@ -91,6 +118,9 @@
                 font-size: 12px;
                 line-height: 14px;
                 color: #FFFFFF;
+                @media only screen and (max-width : $responsive-size-big-mobile) {
+                    display: none;
+                }
             }
         }
     }
@@ -99,6 +129,9 @@
         padding: 30px;
         background: rgba(19, 28, 46, 0.9);
         border-radius: 0px 0px 20px 20px;
+        @media only screen and (max-width : $responsive-size-stand-mobile) {
+            padding: 20px;
+        }
         &.active {
             display: block;
         }
@@ -107,6 +140,9 @@
 .tab-nav-wallet {
     display: flex;
     margin-bottom: 20px;
+    @media only screen and (max-width : $responsive-size-stand-mobile) {
+        flex-direction: column;
+    }
     .item {
         flex: 1 0 auto;
         background: rgba(19, 28, 46, 0.01);
@@ -120,6 +156,12 @@
         cursor: pointer;
         text-align: center;
         padding: 10px;
+        @media only screen and (max-width : $responsive-size-stand-mobile) {
+            width: 100%;
+            &+.item {
+                margin-top: 10px;
+            }
+        }
         &:hover {
             color: #FFFFFF;
         }

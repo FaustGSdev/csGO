@@ -1,12 +1,37 @@
 .table {
   margin-bottom: 10px; }
+  @media only screen and (max-width: 767px) {
+    .table.operations-history .line {
+      flex-direction: column; } }
   .table.operations-history .line.head {
     background: linear-gradient(180deg, #2D384D 0%, #131C2E 100%); }
+    @media only screen and (max-width: 767px) {
+      .table.operations-history .line.head {
+        display: none; } }
   .table.operations-history .line .item {
     text-align: left !important;
     justify-content: flex-start !important; }
+    @media only screen and (max-width: 767px) {
+      .table.operations-history .line .item {
+        width: 100% !important;
+        margin: 5px 0 0 !important;
+        order: 1 !important; } }
+    .table.operations-history .line .item .name {
+      display: none;
+      content: '';
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      color: rgba(255, 255, 255, 0.5);
+      width: 50%; }
+      @media only screen and (max-width: 767px) {
+        .table.operations-history .line .item .name {
+          display: block; } }
     .table.operations-history .line .item:nth-child(1) {
       width: 115px; }
+      @media only screen and (max-width: 767px) {
+        .table.operations-history .line .item:nth-child(1) {
+          margin: 0 !important; } }
     .table.operations-history .line .item:nth-child(2) {
       width: 217px; }
     .table.operations-history .line .item:nth-child(3) {
@@ -28,12 +53,37 @@
     width: calc(100% / 4); }
   .table[data-items="5"] .item {
     width: calc(100% / 5); }
+    @media only screen and (max-width: 767px) {
+      .table[data-items="5"] .item {
+        order: 3;
+        width: calc(100% / 3); } }
+    @media only screen and (max-width: 767px) {
+      .table[data-items="5"] .item:first-child {
+        order: 1;
+        width: 50%;
+        min-height: 24px;
+        margin-bottom: 5px; } }
+    @media only screen and (max-width: 767px) {
+      .table[data-items="5"] .item:last-child {
+        order: 2;
+        width: 50%;
+        min-height: 24px;
+        margin-bottom: 5px; } }
+    @media only screen and (max-width: 767px) {
+      .table[data-items="5"] .item:nth-child(2) {
+        justify-content: flex-start; } }
+    @media only screen and (max-width: 767px) {
+      .table[data-items="5"] .item:nth-child(4) {
+        justify-content: flex-end; } }
   .table .line {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: rgba(255, 255, 255, 0.05);
     padding: 8px 20px; }
+    @media only screen and (max-width: 767px) {
+      .table .line {
+        flex-wrap: wrap; } }
     .table .line:first-child {
       border-radius: 10px 10px 0px 0px; }
     .table .line:last-child {
@@ -94,26 +144,131 @@
   .top-users-table.my-ref-table .head .item {
     width: 18.4%;
     font-weight: 400; }
+    @media only screen and (max-width: 640px) {
+      .top-users-table.my-ref-table .head .item {
+        width: initial;
+        font-size: 14px;
+        line-height: 16px; } }
     .top-users-table.my-ref-table .head .item:first-child {
       width: 28.2%; }
+      @media only screen and (max-width: 640px) {
+        .top-users-table.my-ref-table .head .item:first-child {
+          min-width: 125px; } }
     .top-users-table.my-ref-table .head .item:nth-child(2) {
       width: 28.2%; }
+      @media only screen and (max-width: 640px) {
+        .top-users-table.my-ref-table .head .item:nth-child(2) {
+          display: none; } }
     .top-users-table.my-ref-table .head .item:nth-child(3) {
       width: 19.6%; }
+      @media only screen and (max-width: 640px) {
+        .top-users-table.my-ref-table .head .item:nth-child(3) {
+          width: initial;
+          margin: 0 auto; } }
     .top-users-table.my-ref-table .head .item:nth-child(4) {
       width: 21.7%; }
+      @media only screen and (max-width: 640px) {
+        .top-users-table.my-ref-table .head .item:nth-child(4) {
+          width: 70px; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.my-ref-table .body .item {
+    padding: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.my-ref-table .body .item .info .img {
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.my-ref-table .body .item .info .name {
+    width: calc(100% - 24px) !important;
+    padding-left: 5px !important; } }
 .top-users-table.my-ref-table .body .item .info:first-child {
   width: 28.2%; }
+  @media only screen and (max-width: 640px) {
+    .top-users-table.my-ref-table .body .item .info:first-child {
+      min-width: 125px; } }
 .top-users-table.my-ref-table .body .item .info:nth-child(2) {
   width: 28.2%; }
+  @media only screen and (max-width: 640px) {
+    .top-users-table.my-ref-table .body .item .info:nth-child(2) {
+      width: initial;
+      margin-left: auto;
+      position: relative;
+      padding-right: 3px; }
+      .top-users-table.my-ref-table .body .item .info:nth-child(2):after {
+        display: initial;
+        content: ' / ';
+        padding-left: 3px; } }
 .top-users-table.my-ref-table .body .item .info:nth-child(3) {
   width: 19.6%; }
+  @media only screen and (max-width: 640px) {
+    .top-users-table.my-ref-table .body .item .info:nth-child(3) {
+      width: initial;
+      margin-right: auto; } }
 .top-users-table.my-ref-table .body .item .info:nth-child(4) {
   width: 21.7%; }
+  @media only screen and (max-width: 640px) {
+    .top-users-table.my-ref-table .body .item .info:nth-child(4) {
+      width: 70px; } }
 .top-users-table.my-ref-table .body .item .info .name {
   display: block;
   width: calc(100% - 50px);
   padding-left: 10px; }
+@media only screen and (max-width: 640px) {
+  .top-users-table.top-ref-table .head .item:nth-child(3), .top-users-table.top-ref-table .head .item:first-child, .top-users-table.top-table .head .item:nth-child(3), .top-users-table.top-table .head .item:first-child {
+    display: none; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.top-ref-table .head .item:nth-child(2), .top-users-table.top-table .head .item:nth-child(2) {
+    text-align: left; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.top-ref-table .head .item:nth-child(4), .top-users-table.top-table .head .item:nth-child(4) {
+    text-align: left;
+    width: 100px; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.top-ref-table .body .item, .top-users-table.top-table .body .item {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    justify-content: initial; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.top-ref-table .body .item .info:first-child, .top-users-table.top-table .body .item .info:first-child {
+    margin-left: -12px;
+    width: initial; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.top-ref-table .body .item .info:nth-child(2), .top-users-table.top-table .body .item .info:nth-child(2) {
+    text-align: left;
+    width: initial;
+    padding-left: 10px; }
+    .top-users-table.top-ref-table .body .item .info:nth-child(2) svg, .top-users-table.top-table .body .item .info:nth-child(2) svg {
+      display: none; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.top-ref-table .body .item .info:nth-child(3), .top-users-table.top-table .body .item .info:nth-child(3) {
+    text-align: left;
+    width: 120px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    justify-content: flex-start; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.top-ref-table .body .item .info:nth-child(4), .top-users-table.top-table .body .item .info:nth-child(4) {
+    text-align: left;
+    width: 120px;
+    padding-top: 20px;
+    margin-left: auto;
+    justify-content: flex-start; } }
+@media only screen and (max-width: 640px) {
+  .top-users-table.top-ref-table .body .item .info:nth-child(3) {
+    text-align: left;
+    width: 120px !important;
+    margin-left: auto;
+    justify-content: flex-start;
+    position: relative;
+    top: initial;
+    right: initial; } }
 .top-users-table .head {
   background: linear-gradient(180deg, #29ACD6 0%, #494FD8 100%);
   border-radius: 10px 10px 0px 0px;

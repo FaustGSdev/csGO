@@ -16,6 +16,9 @@
         height: 100vh;
         top: 0;
     }
+    @media only screen and (max-width : $responsive-size-stand-mobile) {
+        background: #131C2E;
+    }
     &.active {
         right: 0;
     }

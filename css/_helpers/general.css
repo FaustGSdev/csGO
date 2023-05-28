@@ -12,18 +12,33 @@ html {
     line-height: 42px;
     text-transform: uppercase;
     color: #FFFFFF; }
+    @media only screen and (max-width: 640px) {
+      html h1 {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 30px; } }
   html h2 {
     font-weight: 700;
     font-size: 30px;
     line-height: 35px;
     text-transform: uppercase;
     color: #FFFFFF; }
+    @media only screen and (max-width: 640px) {
+      html h2 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px; } }
     html h2.big {
       font-weight: 700;
       font-size: 36px;
       line-height: 42px;
       text-transform: uppercase;
       color: #FFFFFF; }
+      @media only screen and (max-width: 640px) {
+        html h2.big {
+          font-weight: 700;
+          font-size: 26px;
+          line-height: 30px; } }
   html h3 {
     font-weight: 700;
     font-size: 20px;
@@ -227,6 +242,9 @@ ul, ol {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 991px) {
+    .head-content {
+      justify-content: center; } }
 
 .column-box {
   display: flex;
@@ -238,6 +256,12 @@ ul, ol {
 
 .d-none {
   display: none !important; }
+
+.d-mob {
+  display: none; }
+  @media only screen and (max-width: 640px) {
+    .d-mob {
+      display: block; } }
 
 .scroll-wrapper {
   overflow: hidden !important;
@@ -326,6 +350,9 @@ hr {
 
 .ref-box hr {
   margin: 30px 0; }
+  @media only screen and (max-width: 767px) {
+    .ref-box hr {
+      margin: 20px 0; } }
 
 .box {
   padding: 30px;
@@ -336,8 +363,14 @@ hr {
   font-size: 20px;
   line-height: 23px;
   color: #FFFFFF; }
+  @media only screen and (max-width: 640px) {
+    .box {
+      padding: 20px; } }
   .box.ref-box {
     background: rgba(19, 28, 46, 0.9) url("../image/bg-ref.png") no-repeat 50% 0; }
+    @media only screen and (max-width: 640px) {
+      .box.ref-box {
+        background-position: 100% 0; } }
     .box.ref-box.no-bg {
       background: rgba(19, 28, 46, 0.9); }
 
@@ -348,5 +381,14 @@ hr {
 
 .w100 {
   width: 100% !important; }
+
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(19, 28, 46, 0.5);
+  z-index: 998; }
 
 /*# sourceMappingURL=general.css.map */

@@ -2,6 +2,14 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 1px; }
+  @media only screen and (max-width: 640px) {
+    .tabs-container .tab-nav.wallet-nav .item .name {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px; } }
+  @media only screen and (max-width: 640px) {
+    .tabs-container .tab-nav.wallet-nav .item .name .ico {
+      margin-right: 5px; } }
   .tabs-container .tab-nav .item {
     cursor: pointer;
     background: rgba(19, 28, 46, 0.9);
@@ -50,9 +58,15 @@
         .tabs-container .tab-nav .item .name {
           font-size: 16px;
           line-height: 19px; } }
+      @media only screen and (max-width: 640px) {
+        .tabs-container .tab-nav .item .name .text {
+          display: none; } }
       .tabs-container .tab-nav .item .name .ico {
         display: block;
         margin-right: 5px; }
+        @media only screen and (max-width: 640px) {
+          .tabs-container .tab-nav .item .name .ico {
+            margin-right: 0; } }
       .tabs-container .tab-nav .item .name svg {
         display: block; }
     .tabs-container .tab-nav .item .price {
@@ -65,6 +79,9 @@
         .tabs-container .tab-nav .item .price {
           font-size: 14px;
           line-height: 16px; } }
+      @media only screen and (max-width: 640px) {
+        .tabs-container .tab-nav .item .price {
+          display: none; } }
     .tabs-container .tab-nav .item .info {
       position: absolute;
       bottom: 6px;
@@ -76,17 +93,26 @@
       font-size: 12px;
       line-height: 14px;
       color: #FFFFFF; }
+      @media only screen and (max-width: 640px) {
+        .tabs-container .tab-nav .item .info {
+          display: none; } }
 .tabs-container .tab-content {
   display: none;
   padding: 30px;
   background: rgba(19, 28, 46, 0.9);
   border-radius: 0px 0px 20px 20px; }
+  @media only screen and (max-width: 767px) {
+    .tabs-container .tab-content {
+      padding: 20px; } }
   .tabs-container .tab-content.active {
     display: block; }
 
 .tab-nav-wallet {
   display: flex;
   margin-bottom: 20px; }
+  @media only screen and (max-width: 767px) {
+    .tab-nav-wallet {
+      flex-direction: column; } }
   .tab-nav-wallet .item {
     flex: 1 0 auto;
     background: rgba(19, 28, 46, 0.01);
@@ -100,6 +126,11 @@
     cursor: pointer;
     text-align: center;
     padding: 10px; }
+    @media only screen and (max-width: 767px) {
+      .tab-nav-wallet .item {
+        width: 100%; }
+        .tab-nav-wallet .item + .item {
+          margin-top: 10px; } }
     .tab-nav-wallet .item:hover {
       color: #FFFFFF; }
     .tab-nav-wallet .item.active {

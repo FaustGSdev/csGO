@@ -64,18 +64,26 @@ $( document ).ready(function() {
 
   $('.btn-burger').on('click touchstart', function (e){
     e.preventDefault();
-    $('.nav').fadeToggle();
-    $(this).toggleClass('active');
+    $('.nav-box').addClass('active');
+    $(this).addClass('active');
+    $('body').addClass('holder').append('<div class="shadow"></div>');
+  });
+  $('.nav-box .close, .shadow').on('click touchstart', function (e){
+    e.preventDefault();
+    $('.btn-burger').removeClass('active');
+    $('.nav-box').removeClass('active');
+    $('body').removeClass('holder');
+    $('.shadow').remove();
   });
   $(document).mouseup( function(e){
     e.preventDefault();
-    var btnBurger = $('.btn-burger');
-    var DropNav = $('.nav');
-    if ( !DropNav.is(e.target) && btnBurger.has(e.target).length === 0
-      && DropNav.has(e.target).length === 0
-      && DropNav.css('display') === 'block' ) {
-      DropNav.fadeToggle();
-      btnBurger.toggleClass('active');
+    var Nav = $('.nav-box');
+    if ( Nav.hasClass('active') && !Nav.is(e.target)
+      && Nav.has(e.target).length === 0 ) {
+      $('.btn-burger').removeClass('active');
+      $('.nav-box').removeClass('active');
+      $('body').removeClass('holder');
+      $('.shadow').remove();
     }
   });
 
@@ -121,7 +129,25 @@ $( document ).ready(function() {
                 '</svg>\n</button>',
               nextArrow: '<button type="button" class="slick-next btn btn-nav"><svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
                 '<path d="M1 1.07373L7.96317 8.0369L1 15.0001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n' +
-                '</svg>\n</button>'
+                '</svg>\n</button>',
+              responsive: [
+                {
+                  breakpoint: 1100,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    rows: 2,
+                  }
+                },
+                {
+                  breakpoint: 710,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    rows: 2,
+                  }
+                }
+              ]
             });
           }
           if($(this).find('.slider-sale').length > 0) {
@@ -138,7 +164,21 @@ $( document ).ready(function() {
                 '</svg>\n</button>',
               nextArrow: '<button type="button" class="slick-next btn btn-nav"><svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
                 '<path d="M1 1.07373L7.96317 8.0369L1 15.0001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n' +
-                '</svg>\n</button>'
+                '</svg>\n</button>',
+              responsive: [
+                {
+                  breakpoint: 1100,
+                  settings: {
+                    slidesToShow: 2,
+                  }
+                },
+                {
+                  breakpoint: 640,
+                  settings: {
+                    slidesToShow: 1,
+                  }
+                }
+              ]
             });
           }
         }
@@ -237,6 +277,12 @@ $( document ).ready(function() {
         settings: {
           slidesToShow: 3,
         }
+      },
+      {
+        breakpoint: 390,
+        settings: {
+          slidesToShow: 2,
+        }
       }
     ]
   });
@@ -250,6 +296,26 @@ $( document ).ready(function() {
     slidesToShow: 9,
     slidesToScroll: 1,
     centerMode: true,
+    responsive: [
+      {
+        breakpoint: 870,
+        settings: {
+          slidesToShow: 7,
+        }
+      },
+      {
+        breakpoint: 710,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+      {
+        breakpoint: 490,
+        settings: {
+          slidesToShow: 3,
+        }
+      }
+    ]
   });
 
   $('.btn-buy-popup').on('click touchstart', function (e){
@@ -275,7 +341,25 @@ $( document ).ready(function() {
           '</svg>\n</button>',
         nextArrow: '<button type="button" class="slick-next btn btn-nav"><svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
           '<path d="M1 1.07373L7.96317 8.0369L1 15.0001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>\n' +
-          '</svg>\n</button>'
+          '</svg>\n</button>',
+        responsive: [
+          {
+            breakpoint: 870,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              rows: 2,
+            }
+          },
+          {
+            breakpoint: 710,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              rows: 2,
+            }
+          }
+        ]
       });
     }
   });
@@ -340,6 +424,15 @@ $( document ).ready(function() {
       }
     });
   });
+
+  if($('.operations-history').length) {
+    $('.operations-history .item').each(function(i){
+      var name = $(this).data('name');
+      $(this).prepend('<span class="name">'+name+'</span>');
+
+    });
+    console.log('true');
+  }
 
   // $('.statistics-holder').scrollbar({});
   // $('.tab-nav-holder').not('.scroll-wrapper').scrollbar({});

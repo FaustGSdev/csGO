@@ -11,12 +11,24 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+    @media only screen and (max-width: 767px) {
+      footer .container {
+        flex-direction: column;
+        align-items: flex-start; } }
   footer .info {
     width: 46.8%; }
+    @media only screen and (max-width: 767px) {
+      footer .info {
+        width: 100%;
+        margin-bottom: 20px; } }
   footer .panel {
     margin: 0;
     padding: 0 10px;
     list-style: none; }
+    @media only screen and (max-width: 767px) {
+      footer .panel {
+        margin-bottom: 20px;
+        padding: 0; } }
     footer .panel li + li {
       margin-top: 10px; }
   footer .copy-box {

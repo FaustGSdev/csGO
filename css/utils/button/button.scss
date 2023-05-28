@@ -230,6 +230,9 @@
         color: #FFFFFF;
         min-height: 40px;
         padding: 0px 20px;
+        @media only screen and (max-width : $responsive-size-stand-mobile) {
+          padding: 0 10px;
+        }
       }
     }
     &.btn-chat {
@@ -251,6 +254,21 @@
       right: -32px;
       width: 108px;
       z-index: 99;
+      @media only screen and (max-width : $responsive-size-stand-mobile) {
+        min-height: 30px;
+        width: 74px;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 15px;
+        padding: 0 14px;
+        right: -21px;
+        svg {
+          margin-right: 5px;
+        }
+      }
+      svg {
+        transform: rotate(90deg);
+      }
       &.hide {
         right: -80px;
       }
@@ -278,6 +296,9 @@
       border-radius: 10px;
       z-index: 10;
       width: auto;
+      @media only screen and (max-width : $responsive-size-stand-mobile) {
+        padding: 0 10px;
+      }
       svg {
         margin: 0;
       }
@@ -298,6 +319,9 @@
       text-align: left;
       @media only screen and (min-width : 1735px) {
         display: flex;
+      }
+      @media only screen and (max-width : $responsive-size-stand-mobile) {
+        padding: 10px;
       }
       .ico {
         margin-right: 10px;
@@ -344,6 +368,9 @@
       color: #FFFFFF;
       width: auto;
       margin: 20px auto 0;
+      @media only screen and (max-width : $responsive-size-stand-mobile) {
+        padding: 0 10px;
+      }
     }
     &.btn-select {
       width: 150px;
@@ -395,7 +422,7 @@
       width: 40px;
       height: 40px;
       min-height: 40px;
-      margin-left: 5px;
+      margin-right: 20px;
       display: none;
       @media only screen and (max-width : $responsive-size-big-tablet) {
         display: flex;

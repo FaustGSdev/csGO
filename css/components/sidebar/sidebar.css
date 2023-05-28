@@ -143,6 +143,9 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 991px) {
+    .panel-bar {
+      display: none; } }
   .panel-bar .social,
   .panel-bar .control {
     display: flex;

@@ -171,6 +171,9 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width : $responsive-size-big-tablet) {
+        display: none;
+    }
     .social,
     .control {
         display: flex;

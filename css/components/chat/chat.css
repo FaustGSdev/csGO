@@ -14,6 +14,9 @@
     .chat-box {
       height: 100vh;
       top: 0; } }
+  @media only screen and (max-width: 767px) {
+    .chat-box {
+      background: #131C2E; } }
   .chat-box.active {
     right: 0; }
   .chat-box .head {

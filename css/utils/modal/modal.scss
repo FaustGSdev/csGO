@@ -12,6 +12,12 @@
         }
     }
     .modal-dialog {
+        @media only screen and (min-width : 576px) {
+            max-width: 90vw;
+        }
+        @media only screen and (min-width : $responsive-size-tablet) {
+            max-width: 768px;
+        }
         @media only screen and (min-width : $responsive-size-desktop) {
             max-width: 1000px;
         }
@@ -21,6 +27,9 @@
         border-radius: 20px;
         padding: 30px;
         position: relative;
+        @media only screen and (max-width : $responsive-size-stand-mobile) {
+            padding: 15px;
+        }
         .btn-close {
             position: absolute;
             top: 30px;
@@ -29,6 +38,10 @@
             height: 24px;
             padding: 0;
             min-height: 24px;
+            @media only screen and (max-width : $responsive-size-stand-mobile) {
+                top: 20px;
+                right: 20px;
+            }
             svg {
                 display: block;
             }
@@ -39,15 +52,56 @@
             margin-bottom: 10px;
             padding-bottom: 10px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            @media only screen and (max-width : $responsive-size-big-tablet) {
+                flex-wrap: wrap;
+            }
+            h2 {
+                @media only screen and (max-width : $responsive-size-big-tablet) {
+                    order: 1;
+                    width: 50%;
+                    text-align: left;
+                    justify-content: flex-start;
+                    margin: 0;
+                }
+            }
             .item {
                 display: flex;
                 align-items: center;
                 min-width: 260px;
+                @media only screen and (max-width : $responsive-size-big-tablet) {
+                    order: 2;
+                    margin-left: auto;
+                    min-width: initial;
+                }
+                &:last-child {
+                    @media only screen and (max-width : $responsive-size-big-tablet) {
+                        width: 100%;
+                        margin-top: 15px;
+                        .btn {
+                            flex-grow: 1;
+                        }
+                    }
+                }
                 .btn {
                     margin-left: 5px;
                     width: initial;
                     &:first-child {
                         margin-left: 0;
+                    }
+                    &.btn-top_up {
+                        svg {
+                            display: none;
+                            margin: 0;
+                            @media only screen and (max-width : $responsive-size-big-mobile) {
+                                display: block;
+                            }
+                        }
+                        span {
+                            display: block;
+                            @media only screen and (max-width : $responsive-size-big-mobile) {
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
@@ -57,6 +111,19 @@
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px 10px 0 0;
             padding: 20px;
+            @media only screen and (max-width : $responsive-size-stand-mobile) {
+                padding: 10px;
+                .items-slider {
+                    .slick-arrow {
+                        &.slick-prev {
+                            left: -20px;
+                        }
+                        &.slick-next {
+                            right: -20px;
+                        }
+                    }
+                }
+            }
 
         }
         .skins-items {
@@ -116,12 +183,34 @@
                     font-size: 36px;
                     line-height: 42px;
                     color: #FFFFFF;
+                    @media only screen and (max-width : $responsive-size-stand-mobile) {
+                        font-weight: 700;
+                        font-size: 26px;
+                        line-height: 30px;
+                    }
                 }
             }
             .status {
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
+                @media only screen and (max-width : $responsive-size-stand-mobile) {
+                    justify-content: space-between;
+                }
+                .right-item {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    @media only screen and (max-width : $responsive-size-stand-mobile) {
+                        flex-direction: column;
+                        width: 30.3%;
+                    }
+                    .item {
+                        @media only screen and (max-width : $responsive-size-stand-mobile) {
+                            width: 100%;
+                        }
+                    }
+                }
                 .item {
                     display: flex;
                     align-items: center;
@@ -131,6 +220,9 @@
                     font-size: 15px;
                     line-height: 18px;
                     color: #FFFFFF;
+                    @media only screen and (max-width : $responsive-size-stand-mobile) {
+                        padding: 0;
+                    }
                     svg {
                         display: block;
                         margin-right: 5px;
@@ -145,6 +237,10 @@
                             text-decoration: none;
                         }
                     }
+                    a,
+                    span {
+                        max-width: calc(100% - 21px);
+                    }
                     &:after {
                         position: absolute;
                         top: 0;
@@ -154,9 +250,17 @@
                         display: block;
                         content: '';
                         background: rgba(255, 255, 255, 0.1);
+                        @media only screen and (max-width : $responsive-size-stand-mobile) {
+                            display: none;
+                        }
                     }
-                    &:first-child {
+                    &.link-item {
                         padding-left: 0;
+                        @media only screen and (max-width : $responsive-size-stand-mobile) {
+                            word-break: break-all;
+                            width: 60.6%;
+                            padding: 0;
+                        }
                         &:after {
                             display: none;
                         }
@@ -229,6 +333,11 @@
         text-transform: uppercase;
         color: #FFFFFF;
         margin: 0 auto;
+        @media only screen and (max-width : $responsive-size-stand-mobile) {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+        }
     }
     h3 {
         font-weight: 700;
