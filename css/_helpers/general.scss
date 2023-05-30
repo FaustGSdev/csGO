@@ -89,7 +89,7 @@ html {
     font-size: 16px;
     color: #FFFFFF;
     margin: 0;
-    padding: 0;
+    padding: 60px 0 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -411,6 +411,13 @@ hr {
   border: none;
   height: 1px;
   background: rgba(255, 255, 255, 0.05);
+  &.bg-hr {
+    background: url("../image/bg.jpg") no-repeat 50% 50%;
+    margin: 0 -30px 20px;
+    @media only screen and (max-width : $responsive-size-stand-mobile) {
+      margin: 0 -20px 20px;
+    }
+  }
 }
 .ref-box {
   hr {

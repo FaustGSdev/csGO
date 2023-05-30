@@ -378,16 +378,29 @@
     &.top-ref-table {
         .body {
             .item {
+                padding-left: 15px;
+                padding-right: 15px;
+                &+.item {
+                    margin-top: 10px;
+                }
                 .info {
+                    &:first-child {
+                        @media only screen and (max-width : $responsive-size-big-mobile) {
+                            margin-left: 0;
+                        }
+                    }
                     &:nth-child(3) {
                         @media only screen and (max-width : $responsive-size-big-mobile) {
                             text-align: left;
                             width: 120px !important;
                             margin-left: auto;
-                            justify-content: flex-start;
+                            justify-content: flex-end;
                             position: relative;
                             top:initial;
                             right: initial;
+                            svg {
+                                display: none;
+                            }
                         }
                     }
                 }

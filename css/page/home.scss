@@ -1278,32 +1278,29 @@
     margin-bottom: 20px;
   }
   .item {
-    width: calc(50% - 15px);
+    //width: calc(50% - 15px);
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     color: #FFFFFF;
-    margin-bottom: 20px;
-    @media only screen and (max-width : $responsive-size-stand-mobile) {
-      width: 100%;
-    }
+    margin-bottom: 30px;
+    width: 100%;
     .head {
-      margin-bottom: 5px;
-      @media only screen and (max-width : $responsive-size-stand-mobile) {
-        display: flex;
-        align-items: center;
-      }
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
       .ico {
-        @media only screen and (max-width : $responsive-size-stand-mobile) {
-          display: block;
-          margin: 0 10px 0 0;
+        display: block;
+        margin: 0 10px 0 0;
+        max-width: 35px;
+        height: auto;
+        @media only screen and (max-width : $responsive-size-big-mobile) {
           max-width: 25px;
+        }
+        img {
+          display: block;
+          width: 100%;
           height: auto;
-          img {
-            display: block;
-            width: 100%;
-            height: auto;
-          }
         }
       }
     }
@@ -1362,6 +1359,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  &.payment-system-out {
+    .item {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        width: calc((100% - 40px) / 3);
+        @media only screen and (max-width : $responsive-size-stand-mobile) {
+          width: calc((100% - 10px) / 2);
+        }
+      }
+      &:nth-child(1) {
+        @media only screen and (max-width : $responsive-size-stand-mobile) {
+          width: 100%;
+        }
+      }
+    }
+  }
   .item {
     height: 100px;
     background: rgba(255, 255, 255, 0.05);
@@ -1377,8 +1391,10 @@
     text-align: center;
     color: #FFFFFF;
     margin-bottom: 20px;
-    outline: 2px solid transparent;
+    border: 2px solid transparent;
     padding: 10px;
+    position: relative;
+    cursor: pointer;
     @media only screen and (max-width : $responsive-size-big-tablet) {
       margin-bottom: 10px;
       width: calc((100% - 30px) / 4);
@@ -1386,8 +1402,17 @@
     @media only screen and (max-width : $responsive-size-stand-mobile) {
       width: calc((100% - 10px) / 2);
     }
+    .percent {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #E84526;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
     &.active {
-      outline: 2px solid #5397FD;
+      border: 2px solid #5397FD;
     }
     span {
       display: block;
@@ -1480,6 +1505,10 @@
     }
     span {
       display: block;
+      span {
+        color: rgba(83, 151, 253, 1);
+        display: inline;
+      }
     }
   }
 }
@@ -1661,12 +1690,6 @@
           border-color: #945AFF;
         }
       }
-      .name {
-        color: #945AFF;
-      }
-      .price {
-        background: #945AFF;
-      }
     }
     &.rare-2 {
       &.active {
@@ -1676,12 +1699,6 @@
         img {
           border-color: #5B76FF;
         }
-      }
-      .name {
-        color: #5B76FF;
-      }
-      .price {
-        background: #5B76FF;
       }
     }
     &.rare-3 {
@@ -1693,12 +1710,6 @@
           border-color: #F79E1B;
         }
       }
-      .name {
-        color: #F79E1B;
-      }
-      .price {
-        background: #F79E1B;
-      }
     }
     &.rare-4 {
       &.active {
@@ -1708,12 +1719,6 @@
         img {
           border-color: #DE5AFF;
         }
-      }
-      .name {
-        color: #DE5AFF;
-      }
-      .price {
-        background: #DE5AFF;
       }
     }
     .name {
@@ -1732,6 +1737,7 @@
       line-height: 14px;
       color: #FFFFFF;
       padding: 3px 5px;
+      background: linear-gradient(180deg, #2D384D 0%, #131C2E 100%);
     }
     .img {
       margin-bottom: 10px;
@@ -1961,24 +1967,20 @@
   }
 }
 .info-ref {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  @media only screen and (max-width : $responsive-size-big-mobile) {
-    flex-direction: column;
-  }
+  padding-top: 10px;
   .item {
-    width: calc((100% - 60px) / 3);
+    //width: calc((100% - 60px) / 3);
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     text-transform: uppercase;
     color: #FFFFFF;
-    @media only screen and (max-width : $responsive-size-big-mobile) {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      &+.item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &+.item {
+      margin-top: 30px;
+      @media only screen and (max-width : $responsive-size-big-mobile) {
         margin-top: 10px;
       }
     }
@@ -1993,7 +1995,6 @@
       }
     }
     .number {
-      display: none;
       align-items: center;
       justify-content: center;
       width: 50px;
@@ -2004,17 +2005,13 @@
       font-size: 30px;
       line-height: 35px;
       color: #5397FD;
-      @media only screen and (max-width : $responsive-size-big-mobile) {
-        display: flex;
-        padding: 0;
-      }
+      display: flex;
+      padding: 0;
     }
     span {
       display: block;
-      @media only screen and (max-width : $responsive-size-big-mobile) {
-        width: calc(100% - 50px);
-        padding-left: 20px;
-      }
+      width: calc(100% - 50px);
+      padding-left: 20px;
     }
   }
 }
@@ -2416,6 +2413,26 @@
   .btn {
     @media only screen and (max-width : $responsive-size-stand-mobile) {
       width: 100%;
+    }
+  }
+}
+.ico-title {
+  display: flex;
+  align-items: center;
+  .ico {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    padding: 0 8px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
   }
 }

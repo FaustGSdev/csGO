@@ -260,15 +260,25 @@
     padding-top: 20px;
     margin-left: auto;
     justify-content: flex-start; } }
-@media only screen and (max-width: 640px) {
-  .top-users-table.top-ref-table .body .item .info:nth-child(3) {
-    text-align: left;
-    width: 120px !important;
-    margin-left: auto;
-    justify-content: flex-start;
-    position: relative;
-    top: initial;
-    right: initial; } }
+.top-users-table.top-ref-table .body .item {
+  padding-left: 15px;
+  padding-right: 15px; }
+  .top-users-table.top-ref-table .body .item + .item {
+    margin-top: 10px; }
+  @media only screen and (max-width: 640px) {
+    .top-users-table.top-ref-table .body .item .info:first-child {
+      margin-left: 0; } }
+  @media only screen and (max-width: 640px) {
+    .top-users-table.top-ref-table .body .item .info:nth-child(3) {
+      text-align: left;
+      width: 120px !important;
+      margin-left: auto;
+      justify-content: flex-end;
+      position: relative;
+      top: initial;
+      right: initial; }
+      .top-users-table.top-ref-table .body .item .info:nth-child(3) svg {
+        display: none; } }
 .top-users-table .head {
   background: linear-gradient(180deg, #29ACD6 0%, #494FD8 100%);
   border-radius: 10px 10px 0px 0px;
