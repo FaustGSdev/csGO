@@ -4,14 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
+    <link rel="stylesheet" href="css/bootstrap-modal.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/all.css">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <script src="js/util.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/jquery.scrollbar.js"></script>
-    <script src="js/bootstrap.modal.js"></script>
-    <script src="js/main.js"></script>
   </head>
   <body>
   <header class="header">
@@ -343,7 +338,7 @@
 
           <div class="tabs-container">
             <div class="tab-nav">
-              <div class="item active" data-tab="tab-1">
+              <div class="item" data-tab="tab-1">
               <span class="name">
                 <span class="ico">
                   <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -419,7 +414,7 @@
                 <span class="price">На кону: ₽0</span>
                 <span class="info">2/3</span>
               </div>
-              <div class="item" data-tab="tab-5">
+              <div class="item active" data-tab="tab-5">
               <span class="name">
                 <span class="ico">
                   <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -433,7 +428,7 @@
               </div>
             </div>
 
-            <div class="tab-content active" data-tab="tab-1">
+            <div class="tab-content" data-tab="tab-1">
               <h2 class="mb15 d-mob">STANDARD GAME</h2>
               <div class="holder-flex">
                 <div class="game-info">
@@ -1186,8 +1181,219 @@
                 </div>
               </div>
             </div>
-            <div class="tab-content " data-tab="tab-5">
-              <h1>coin flip</h1>
+            <div class="tab-content active" data-tab="tab-5">
+              <h2 class="mb15 d-mob">coin flip</h2>
+
+              <div class="game-info">
+                <div class="info-list">
+                  <div class="item">
+                  <span class="title">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.8334 0C16.3562 0 20.8334 4.47715 20.8334 10C20.8334 15.5228 16.3562 20 10.8334 20C5.31053 20 0.833374 15.5228 0.833374 10C0.833374 4.47715 5.31053 0 10.8334 0ZM10.8334 15.4167C9.09509 15.4167 7.43341 15.9017 6.00272 16.7909C7.36518 17.7621 9.03257 18.3333 10.8334 18.3333C12.6338 18.3333 14.3009 17.7624 15.6634 16.7916C14.2329 15.9015 12.5714 15.4167 10.8334 15.4167ZM10.8334 1.66667C6.231 1.66667 2.50004 5.39763 2.50004 10C2.50004 12.1797 3.33692 14.164 4.7069 15.649C6.48806 14.4235 8.60919 13.75 10.8334 13.75C13.0578 13.75 15.1791 14.4236 16.9606 15.6478C18.3301 14.1633 19.1667 12.1793 19.1667 10C19.1667 5.39763 15.4357 1.66667 10.8334 1.66667ZM10.8334 4.58333C13.0202 4.58333 14.7917 6.35487 14.7917 8.54167C14.7917 10.7285 13.0202 12.5 10.8334 12.5C8.64657 12.5 6.87504 10.7285 6.87504 8.54167C6.87504 6.35487 8.64657 4.58333 10.8334 4.58333ZM10.8334 6.25C9.56705 6.25 8.54171 7.27534 8.54171 8.54167C8.54171 9.80799 9.56705 10.8333 10.8334 10.8333C12.0997 10.8333 13.125 9.80799 13.125 8.54167C13.125 7.27534 12.0997 6.25 10.8334 6.25Z" fill="white" fill-opacity="0.5"/>
+                    </svg>
+                    игроков
+                  </span>
+                    <strong>2</strong>
+                  </div>
+                  <div class="item">
+                  <span class="title">
+                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.7042 6.65664C14.4092 7.83331 16.625 10.6666 16.625 13.2191C16.625 15.8083 13.8242 17.9066 11 17.9066C8.17583 17.9066 5.375 15.8083 5.375 13.2191C5.375 10.6666 7.59083 7.83331 9.29583 6.65664L8 3.56747C7.94783 3.47638 7.91536 3.37536 7.90469 3.27093C7.89402 3.1665 7.90539 3.061 7.93807 2.96124C7.97074 2.86149 8.02399 2.7697 8.09438 2.69182C8.16476 2.61394 8.25071 2.55171 8.34667 2.50914C10.0689 1.94373 11.9269 1.94373 13.6492 2.50914C13.7455 2.55131 13.8318 2.61325 13.9027 2.69095C13.9735 2.76866 14.0272 2.86038 14.0603 2.96018C14.0933 3.05997 14.1051 3.16561 14.0947 3.27023C14.0843 3.37485 14.052 3.47612 14 3.56747L12.7042 6.65664Z" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.29578 6.65668H12.7041" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4.75 17.2817C2.25 17.2817 1.625 14.7817 1.625 13.02C1.66181 11.9877 1.95348 10.9806 2.47402 10.0884C2.99457 9.19621 3.72779 8.44669 4.60833 7.90668L3.555 6.38751C3.49008 6.29377 3.45205 6.18406 3.44501 6.07026C3.43797 5.95645 3.4622 5.84289 3.51507 5.74187C3.56794 5.64084 3.64744 5.55621 3.74496 5.49713C3.84249 5.43804 3.95431 5.40677 4.06833 5.40668H6" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.25 17.2817C19.75 17.2817 20.375 14.7817 20.375 13.02C20.3382 11.9877 20.0465 10.9806 19.526 10.0884C19.0054 9.19621 18.2722 8.44669 17.3917 7.90668L18.445 6.38751C18.5099 6.29377 18.548 6.18406 18.555 6.07026C18.562 5.95645 18.5378 5.84289 18.4849 5.74187C18.4321 5.64084 18.3526 5.55621 18.255 5.49713C18.1575 5.43804 18.0457 5.40677 17.9317 5.40668H16" stroke="white" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    диапазон
+                  </span>
+                    <strong>~₽150-100 000</strong>
+                  </div>
+                  <div class="item">
+                  <span class="title">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1.16705" y="1.49921" width="3.60034" height="3.60034" rx="0.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+                    <rect x="8.36652" y="1.49921" width="3.60034" height="3.60034" rx="0.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+                    <rect x="15.5659" y="1.49921" width="3.60034" height="3.60034" rx="0.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+                    <rect x="1.16705" y="8.69989" width="3.60034" height="3.60034" rx="0.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+                    <rect x="8.36652" y="8.69989" width="3.60034" height="3.60034" rx="0.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+                    <rect x="15.5659" y="8.69989" width="3.60034" height="3.60034" rx="0.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+                    <rect x="1.16705" y="15.9004" width="3.60034" height="3.60034" rx="0.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+                    <rect x="8.36652" y="15.9004" width="3.60034" height="3.60034" rx="0.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+                    <rect x="15.5659" y="15.9004" width="3.60034" height="3.60034" rx="0.25" stroke="white" stroke-opacity="0.5" stroke-width="1.5"/>
+                    </svg>
+                    предметов
+                  </span>
+                    <strong>2-12</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="part-block">
+                <div class="part-list part-list-two">
+                  <div class="item">
+                    <div class="box">
+                      <div class="ico">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="11" stroke="#5397FD" stroke-width="2"/>
+                          <path d="M12 7V12" stroke="#5397FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 16V16.5" stroke="#5397FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                      <p>Создайте игру по своим критериям. Или выберите готовую ниже</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <button data-toggle="modal" data-target="#modalAddGame" class="btn btn-primary btnAddGame">Создать игру</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="coin-flip-game">
+                <div class="head">
+                  <span>№</span>
+                  <span>Участники</span>
+                  <span>Предметы</span>
+                  <span>Банк</span>
+                  <span>Победитель</span>
+                  <span>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.56758 9.95998H6.88508V15.36C6.88508 16.62 7.56758 16.875 8.40008 15.93L14.0776 9.47998C14.7751 8.69248 14.4826 8.03998 13.4251 8.03998H11.1076V2.63998C11.1076 1.37998 10.4251 1.12498 9.59258 2.06998L3.91508 8.51998C3.22508 9.31498 3.51758 9.95998 4.56758 9.95998Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+                <div class="body">
+                  <div class="item">
+                    <div class="number"><span>#344164</span></div>
+                    <div class="members">
+                      <div class="member active">
+                        <div class="img">
+                          <img src="image/img-14.png" alt="">
+                        </div>
+                        <span class="logotype"><img src="image/logotype-01.png" alt=""></span>
+                      </div>
+                      <span class="separator">VS</span>
+                      <div class="member">
+                        <div class="img">
+                        </div>
+                        <span class="logotype"><img src="image/logotype-02.png" alt=""></span>
+                      </div>
+                    </div>
+                    <div class="items-add">
+                      <div class="add-list">
+                        <div class="item-list rt1">
+                          <img src="image/img-15.jpg" alt="">
+                          <span>~₽50</span>
+                        </div>
+                        <div class="item-list rt2">
+                          <img src="image/img-15.jpg" alt="">
+                          <span>~₽50</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sum-info">
+                      <span class="title">₽250</span>
+                      <span class="info-name">Диапазон ставки:</span>
+                      <span class="info-range">₽163,12-178,08</span>
+                    </div>
+                    <div class="winner">
+                      <div class="progress-game">
+                        <div class="line"><div style="width: 20%;"></div></div>
+                        <span class="sec">372 сек</span>
+                      </div>
+                    </div>
+                    <div class="btn-box">
+                      <a href="#" class="btn"><img src="image/ico-eye.svg" alt=""></a>
+                      <a href="#" data-toggle="modal" data-target="#modalGame" class="btn"><img src="image/ico-add-game.svg" alt=""></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="number"><span>#344164</span></div>
+                    <div class="members">
+                      <div class="member active">
+                        <div class="img">
+                          <img src="image/img-14.png" alt="">
+                        </div>
+                        <span class="logotype"><img src="image/logotype-01.png" alt=""></span>
+                      </div>
+                      <span class="separator">VS</span>
+                      <div class="member active">
+                        <div class="img">
+                          <img src="image/img-04.png" alt="">
+                        </div>
+                        <span class="logotype"><img src="image/logotype-02.png" alt=""></span>
+                      </div>
+                    </div>
+                    <div class="items-add">
+                      <div class="add-list">
+                        <div class="item-list rt1">
+                          <img src="image/img-15.jpg" alt="">
+                          <span>~₽50</span>
+                        </div>
+                        <div class="item-list rt2">
+                          <img src="image/img-15.jpg" alt="">
+                          <span>~₽50</span>
+                        </div>
+                        <div class="item-list rt3">
+                          <img src="image/img-15.jpg" alt="">
+                          <span>~₽50</span>
+                        </div>
+                      </div>
+                      <span class="added-items">+2</span>
+                    </div>
+                    <div class="sum-info">
+                      <span class="title">₽250</span>
+                    </div>
+                    <div class="winner">
+                      <div class="member">
+                        <div class="img">
+                          <img src="image/img-04.png" alt="">
+                        </div>
+                        <span class="win-ico"><img src="image/ico-win.svg" alt=""></span>
+                        <span class="logotype"><img src="image/logotype-02.png" alt=""></span>
+                      </div>
+                    </div>
+                    <div class="btn-box">
+                      <a href="#" class="btn"><img src="image/ico-eye.svg" alt=""></a>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="number"><span>#344164</span></div>
+                    <div class="members">
+                      <div class="member active">
+                        <div class="img">
+                          <img src="image/img-14.png" alt="">
+                        </div>
+                        <span class="logotype"><img src="image/logotype-01.png" alt=""></span>
+                      </div>
+                      <span class="separator">VS</span>
+                      <div class="member">
+                        <div class="img">
+                        </div>
+                        <span class="logotype"><img src="image/logotype-02.png" alt=""></span>
+                      </div>
+                    </div>
+                    <div class="items-add">
+                      <div class="add-list">
+                        <div class="item-list rt1">
+                          <img src="image/img-15.jpg" alt="">
+                          <span>~₽50</span>
+                        </div>
+                        <div class="item-list rt2">
+                          <img src="image/img-15.jpg" alt="">
+                          <span>~₽50</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sum-info">
+                      <span class="title">₽100</span>
+                    </div>
+                    <div class="winner">
+                      <span class="text">Игра отменена, возврат ставки</span>
+                    </div>
+                    <div class="btn-box">
+                      <a href="#" class="btn"><img src="image/ico-eye.svg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -1835,5 +2041,302 @@
     </div>
   </div>
 
+
+
+
+  <div class="modal fade" id="modalAddGame" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <span class="btn btn-close" data-dismiss="modal"></span>
+        <div class="head">
+
+          <h2>Создание игры</h2>
+          <div class="item">
+            <button class="btn btn-primary btn-small">Внести предметы</button>
+          </div>
+        </div>
+        <div class="search-box">
+          <div class="search">
+            <input type="submit" value="" />
+            <input type="text" placeholder="название" />
+          </div>
+          <div class="price-box">
+            <span>Цена, ₽</span>
+            <input type="text" placeholder="мин" />
+            <span class="separator">-</span>
+            <input type="text" placeholder="макс" />
+          </div>
+        </div>
+        <div class="skins-holder">
+          <div class="skins-items">
+            <div class="items-slider slider-add-item">
+
+              <div class="slide">
+                <div class="item rare-1">
+                  <div class="img">
+                    <img src="image/img-09.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Shock of the Anvil</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-3">
+                  <div class="img">
+                    <img src="image/img-11.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Pike of the Honor...</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-4">
+                  <div class="img">
+                    <img src="image/img-12.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Dirgesworn Dynasty</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-2">
+                  <div class="img">
+                    <img src="image/img-10.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Blood Chaser</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-2">
+                  <div class="img">
+                    <img src="image/img-10.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Blood Chaser</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-1">
+                  <div class="img">
+                    <img src="image/img-09.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Shock of the Anvil</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-3">
+                  <div class="img">
+                    <img src="image/img-11.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Pike of the Honor...</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-4">
+                  <div class="img">
+                    <img src="image/img-12.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Dirgesworn Dynasty</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-2">
+                  <div class="img">
+                    <img src="image/img-10.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Blood Chaser</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-1">
+                  <div class="img">
+                    <img src="image/img-09.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Shock of the Anvil</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-3">
+                  <div class="img">
+                    <img src="image/img-11.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Pike of the Honor...</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-4">
+                  <div class="img">
+                    <img src="image/img-12.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Dirgesworn Dynasty</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+
+              <div class="slide">
+                <div class="item rare-1">
+                  <div class="img">
+                    <img src="image/img-09.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Shock of the Anvil</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-3">
+                  <div class="img">
+                    <img src="image/img-11.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Pike of the Honor...</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-4">
+                  <div class="img">
+                    <img src="image/img-12.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Dirgesworn Dynasty</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-2">
+                  <div class="img">
+                    <img src="image/img-10.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Blood Chaser</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-2">
+                  <div class="img">
+                    <img src="image/img-10.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Blood Chaser</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-1">
+                  <div class="img">
+                    <img src="image/img-09.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Shock of the Anvil</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-3">
+                  <div class="img">
+                    <img src="image/img-11.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Pike of the Honor...</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-4">
+                  <div class="img">
+                    <img src="image/img-12.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Dirgesworn Dynasty</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-2">
+                  <div class="img">
+                    <img src="image/img-10.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Blood Chaser</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-1">
+                  <div class="img">
+                    <img src="image/img-09.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Shock of the Anvil</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-3">
+                  <div class="img">
+                    <img src="image/img-11.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Pike of the Honor...</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+              <div class="slide">
+                <div class="item rare-4">
+                  <div class="img">
+                    <img src="image/img-12.jpg" width="100" height="67" alt="">
+                  </div>
+                  <span class="name">Dirgesworn Dynasty</span>
+                  <span class="price">~₽100</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="total-box">
+            <div class="item">
+              <span class="label">Предметов выбрано:</span>
+              <span class="info">2</span>
+            </div>
+            <div class="item">
+              <span class="label">ОБщая сумма:</span>
+              <span class="info">₽250</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" data-dismiss="modal" class="btn btn-primary btn-buy btn-apply">купить скины</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/bootstrap.modal.js"></script>
+  <script src="js/jquery.scrollbar.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
   </body>
 </html>
