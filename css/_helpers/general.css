@@ -258,10 +258,13 @@ ul, ol {
   display: none !important; }
 
 .d-mob {
-  display: none; }
+  display: none !important; }
   @media only screen and (max-width: 640px) {
     .d-mob {
-      display: block; } }
+      display: block !important; } }
+  @media only screen and (max-width: 640px) {
+    .d-mob.btn {
+      display: flex !important; } }
 
 .scroll-wrapper {
   overflow: hidden !important;

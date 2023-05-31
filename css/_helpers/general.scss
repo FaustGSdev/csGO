@@ -308,9 +308,14 @@ ul, ol {
   display: none !important;
 }
 .d-mob {
-  display: none;
+  display: none !important;
   @media only screen and (max-width : $responsive-size-big-mobile) {
-    display: block;
+    display: block !important;
+  }
+  &.btn {
+    @media only screen and (max-width : $responsive-size-big-mobile) {
+      display: flex !important;
+    }
   }
 }
 

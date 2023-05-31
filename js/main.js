@@ -136,11 +136,27 @@ $( document ).ready(function() {
                   settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    rows: 2,
+                    rows: 3,
+                  }
+                },
+                {
+                  breakpoint: 991,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    rows: 3,
                   }
                 },
                 {
                   breakpoint: 710,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    rows: 3,
+                  }
+                },
+                {
+                  breakpoint: 540,
                   settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -344,19 +360,35 @@ $( document ).ready(function() {
           '</svg>\n</button>',
         responsive: [
           {
-            breakpoint: 870,
+            breakpoint: 1100,
             settings: {
               slidesToShow: 3,
               slidesToScroll: 3,
-              rows: 2,
+              rows: 3,
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              rows: 3,
             }
           },
           {
             breakpoint: 710,
             settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              rows: 3,
+            }
+          },
+          {
+            breakpoint: 540,
+            settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
-              rows: 2,
+              rows: 3,
             }
           }
         ]
