@@ -491,8 +491,7 @@ $( document ).ready(function() {
 
   $('.btnAddGame').on('click touchstart', function (e){
     e.preventDefault();
-    // $('#modalContribute').modal('hide');
-    // $('#modalBuy').modal('show');
+    $('#modalAddGame').modal('show');
     setTimeout(function () {
       //$('body').addClass('modal-open').css('padding-right', '15px');
     if($('#modalAddGame .slider-add-item').length > 0) {
