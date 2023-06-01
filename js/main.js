@@ -549,6 +549,24 @@ $( document ).ready(function() {
     }},10);
   });
 
+  $('.create-head .item').on('click touchstart', function(e) {
+    e.preventDefault();
+    $('.create-head .item').removeClass('active');
+    $(this).toggleClass('active');
+  });
+
+  $('.member-check').on('click touchstart', function(e) {
+    e.preventDefault();
+    var target = $(this).data('item');
+    $(this).parent('.item').toggleClass('active');
+    $('.holder-user-item').each(function(i){
+      if($(this).data('item') == target) {
+        $('.holder-user-item').removeClass('active');
+        $(this).addClass('active');
+      }
+    });
+  });
+
   // $('.statistics-holder').scrollbar({});
   // $('.tab-nav-holder').not('.scroll-wrapper').scrollbar({});
 

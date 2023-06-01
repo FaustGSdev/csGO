@@ -41,10 +41,47 @@
     align-items: center;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative; }
     @media only screen and (max-width: 991px) {
       .modal .modal-content .head {
         flex-wrap: wrap; } }
+    .modal .modal-content .head .number-ticket {
+      display: none;
+      width: 100%;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      margin-top: 5px;
+      order: 2; }
+      @media only screen and (max-width: 767px) {
+        .modal .modal-content .head .number-ticket {
+          display: block; } }
+    .modal .modal-content .head.head-btn h2 {
+      min-height: 40px; }
+      @media only screen and (max-width: 991px) {
+        .modal .modal-content .head.head-btn h2 {
+          width: initial; } }
+    .modal .modal-content .head.head-btn .btn.btn-add {
+      width: initial;
+      position: absolute;
+      top: 0;
+      right: 0; }
+      @media only screen and (max-width: 991px) {
+        .modal .modal-content .head.head-btn .btn.btn-add {
+          position: relative;
+          background: none !important;
+          padding: 10px;
+          order: 2;
+          margin-left: auto; }
+          .modal .modal-content .head.head-btn .btn.btn-add span {
+            display: none; } }
+      .modal .modal-content .head.head-btn .btn.btn-add img {
+        display: none; }
+        @media only screen and (max-width: 991px) {
+          .modal .modal-content .head.head-btn .btn.btn-add img {
+            display: block; } }
     @media only screen and (max-width: 991px) {
       .modal .modal-content .head h2 {
         order: 1;

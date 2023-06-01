@@ -52,8 +52,54 @@
             margin-bottom: 10px;
             padding-bottom: 10px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
             @media only screen and (max-width : $responsive-size-big-tablet) {
                 flex-wrap: wrap;
+            }
+            .number-ticket {
+                display: none;
+                width: 100%;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #FFFFFF;
+                margin-top: 5px;
+                order: 2;
+                @media only screen and (max-width : $responsive-size-stand-mobile) {
+                    display: block;
+                }
+            }
+            &.head-btn {
+                h2 {
+                    min-height: 40px;
+                    @media only screen and (max-width : $responsive-size-big-tablet) {
+                        width: initial;
+                    }
+                }
+                .btn {
+                    &.btn-add {
+                        width: initial;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        @media only screen and (max-width : $responsive-size-big-tablet) {
+                            position: relative;
+                            background: none !important;
+                            padding: 10px;
+                            order: 2;
+                            margin-left: auto;
+                            span {
+                                display: none;
+                            }
+                        }
+                        img {
+                            display: none;
+                            @media only screen and (max-width : $responsive-size-big-tablet) {
+                                display: block;
+                            }
+                        }
+                    }
+                }
             }
             h2 {
                 @media only screen and (max-width : $responsive-size-big-tablet) {
