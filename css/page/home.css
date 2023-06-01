@@ -2563,6 +2563,23 @@
           line-height: 13px;
           text-align: center;
           color: rgba(255, 255, 255, 0.8); }
+      .coin-flip-game .body .item .winner .name {
+        display: block;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: #FFFFFF;
+        margin: 5px 0 2px; }
+      .coin-flip-game .body .item .winner .chance {
+        display: block;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5); }
+        .coin-flip-game .body .item .winner .chance span {
+          color: #f79e1b; }
       .coin-flip-game .body .item .winner .member {
         padding: 4px;
         width: 65px;
@@ -2608,14 +2625,14 @@
           padding: 5px 0;
           width: 100%;
           display: flex;
-          flex-direction: row; } }
+          flex-direction: row-reverse; } }
       .coin-flip-game .body .item .btn-box .btn {
         padding: 0;
-        min-height: initial; }
+        min-height: initial;
+        max-width: 40px; }
         @media only screen and (max-width: 767px) {
           .coin-flip-game .body .item .btn-box .btn {
             flex-grow: 1;
-            background: linear-gradient(180deg, #2D384D 0%, #131C2E 100%);
             text-transform: uppercase;
             color: #FFFFFF;
             font-weight: 700;
@@ -2624,7 +2641,13 @@
             padding: 8px 14px;
             display: flex;
             align-items: center;
-            width: initial; } }
+            width: initial;
+            max-width: initial;
+            min-height: 40px; }
+            .coin-flip-game .body .item .btn-box .btn:not(.btn-primary) {
+              background: linear-gradient(180deg, #2D384D 0%, #131C2E 100%); } }
+        .coin-flip-game .body .item .btn-box .btn.btn-primary {
+          min-height: 40px; }
         .coin-flip-game .body .item .btn-box .btn span {
           display: none;
           padding-left: 10px; }
@@ -2635,7 +2658,7 @@
           margin-top: 10px; }
           @media only screen and (max-width: 767px) {
             .coin-flip-game .body .item .btn-box .btn + .btn {
-              margin: 0 0 0 5px; } }
+              margin: 0 5px 0 0; } }
         .coin-flip-game .body .item .btn-box .btn img {
           display: block; }
 
@@ -2688,6 +2711,20 @@
           font-weight: 500;
           font-size: 16px;
           line-height: 19px; } }
+    .create-head .item .chance {
+      margin-top: 5px;
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5); }
+      @media only screen and (max-width: 767px) {
+        .create-head .item .chance {
+          font-size: 12px;
+          line-height: 14px; } }
+      .create-head .item .chance span {
+        color: #f79e1b; }
     .create-head .item .member {
       position: relative;
       width: 150px;
@@ -2709,8 +2746,7 @@
         width: 100%;
         height: 100%;
         border: none;
-        padding: 0;
-        overflow: hidden; }
+        padding: 0; }
         .create-head .item .member .img img {
           display: block;
           width: 100%;
@@ -2720,7 +2756,10 @@
         top: 0;
         background: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(2px);
-        padding: 5px; }
+        padding: 12px; }
+        @media only screen and (max-width: 767px) {
+          .create-head .item .member .win-ico {
+            padding: 6px; } }
       .create-head .item .member .logotype {
         bottom: 0;
         right: 0; }
@@ -2785,6 +2824,29 @@
     .create-head .separator .game-logo .btn {
       width: initial;
       margin: 40px auto 0; }
+    .create-head .separator .progress-game {
+      text-align: center;
+      width: 120px;
+      margin: 20px auto 0; }
+      @media only screen and (max-width: 767px) {
+        .create-head .separator .progress-game {
+          display: none; } }
+      .create-head .separator .progress-game .line {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        overflow: hidden; }
+        .create-head .separator .progress-game .line div {
+          background: #5397FD;
+          border-radius: 10px;
+          height: 4px; }
+      .create-head .separator .progress-game .sec {
+        display: block;
+        margin-top: 5px;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8); }
     .create-head .separator .text-mob {
       font-weight: 500;
       font-size: 16px;
@@ -2970,5 +3032,32 @@
     @media only screen and (max-width: 767px) {
       .holder-user-item .total-box-head {
         order: 2; } }
+
+.progress-timer {
+  order: 2;
+  width: 100%;
+  display: none;
+  align-items: center;
+  margin-top: 6px; }
+  @media only screen and (max-width: 767px) {
+    .progress-timer {
+      display: flex; } }
+  .progress-timer span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: block;
+    color: #FFFFFF;
+    width: 50px;
+    margin-right: 10px; }
+  .progress-timer .line {
+    width: calc(100% - 60px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    overflow: hidden; }
+    .progress-timer .line div {
+      background: #5397FD;
+      border-radius: 10px;
+      height: 6px; }
 
 /*# sourceMappingURL=home.css.map */
