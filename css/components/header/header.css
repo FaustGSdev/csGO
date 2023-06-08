@@ -1,10 +1,3 @@
-body.holder header {
-  position: initial;
-  z-index: initial; }
-  body.holder header .container {
-    position: initial;
-    z-index: initial; }
-
 header {
   padding: 0;
   background: #131C2E;
@@ -15,8 +8,7 @@ header {
   top: 0;
   left: 0;
   display: flex;
-  align-items: center;
-  z-index: 100; }
+  align-items: center; }
   @media only screen and (max-width: 991px) {
     header {
       padding: 10px 0; } }
@@ -401,10 +393,10 @@ header {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     margin-left: 5px;
-    padding: 0 20px;
+    padding: 0 5px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 40px;
     min-width: 175px; }
     @media only screen and (max-width: 767px) {
@@ -427,7 +419,6 @@ header {
     header .user-control .sum {
       display: flex;
       align-items: center;
-      font-weight: 700;
       font-size: 14px;
       line-height: 16px;
       color: #FFFFFF;

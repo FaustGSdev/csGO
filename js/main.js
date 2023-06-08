@@ -323,11 +323,18 @@ $( document ).ready(function() {
     e.preventDefault();
     $('.chat-box').toggleClass('active');
     $(this).toggleClass('hide');
+    $('body').toggleClass('holder');
   });
   $('.chat-box .hide').on('click touchstart', function (e){
     e.preventDefault();
     $('.btn-chat').toggleClass('hide');
     $('.chat-box').toggleClass('active');
+    $('body').toggleClass('holder');
+  });
+  $('.sort-history .control-block .btn').on('click touchstart', function (e){
+    e.preventDefault();
+    $('.sort-history .control-block .btn').toggleClass('active');
+    $(this).parents('.tab-content').find('.user-game.history-game').toggleClass('history-coin');
   });
   $('.message-list').scrollbar();
   if($('.banner').length > 0) {
@@ -566,6 +573,37 @@ $( document ).ready(function() {
     });
   });
 
+
+
+  $('.btn-support').on('click touchstart', function(e) {
+    e.preventDefault();
+    $(this).addClass('active');
+    if($('.support-box').css('display') == 'none') {
+      $('.support-box').show();
+    }
+  });
+
+  // if ($('.form-message textarea').length) {
+  //   autosize($('.form-message textarea'));
+  // }
+
+  $('.formConfirm').validate({
+    rules: {
+      agreement: 'required',
+      rules: 'required',
+    },
+    errorPlacement: function (error, element) {
+      if (element.attr('name') !== 'agreement' && element.attr('name') !== 'rules') {
+        error.insertAfter(element);
+      }
+    },
+    submitHandler: function (form) {
+      console.log('val');
+      // setTimeout(function () {
+      //   window.location.href = 'lk-wallet.html';
+      // }, 1000);
+    },
+  });
   // $('.statistics-holder').scrollbar({});
   // $('.tab-nav-holder').not('.scroll-wrapper').scrollbar({});
 

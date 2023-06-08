@@ -227,7 +227,7 @@
       background: #CA3838; }
   .btn.btn-support {
     padding: 10px 20px;
-    display: none;
+    display: flex;
     align-items: center;
     position: absolute;
     bottom: 20px;
@@ -235,9 +235,9 @@
     width: auto;
     justify-content: flex-start;
     text-align: left; }
-    @media only screen and (min-width: 1735px) {
+    @media only screen and (min-width: 991px) {
       .btn.btn-support {
-        display: flex; } }
+        display: none; } }
     @media only screen and (max-width: 767px) {
       .btn.btn-support {
         padding: 10px; } }
@@ -341,5 +341,7 @@
       display: none; }
     .btn.btn-burger.active .close {
       display: block; }
+  .btn.btn-auto {
+    width: auto !important; }
 
 /*# sourceMappingURL=button.css.map */

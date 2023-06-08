@@ -448,13 +448,6 @@ footer {
         footer .copy-box .pay-box img + img {
           margin-left: 10px; }
 
-body.holder header {
-  position: initial;
-  z-index: initial; }
-  body.holder header .container {
-    position: initial;
-    z-index: initial; }
-
 header {
   padding: 0;
   background: #131C2E;
@@ -850,10 +843,10 @@ header {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     margin-left: 5px;
-    padding: 0 20px;
+    padding: 0 5px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 40px;
     min-width: 175px; }
     @media only screen and (max-width: 767px) {
@@ -876,7 +869,6 @@ header {
     header .user-control .sum {
       display: flex;
       align-items: center;
-      font-weight: 700;
       font-size: 14px;
       line-height: 16px;
       color: #FFFFFF;
@@ -1394,6 +1386,59 @@ header {
       color: #FFFFFF; }
       .chat-box .bottom .balance p {
         margin: 0 0 10px; }
+    .chat-box .bottom .form-message {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      position: relative;
+      display: none; }
+      .chat-box .bottom .form-message.active {
+        display: flex; }
+      .chat-box .bottom .form-message .input-holder {
+        overflow: auto;
+        max-height: 60px;
+        min-height: 16px;
+        height: auto;
+        -ms-overflow-style: none;
+        width: calc(100% - 42px);
+        scrollbar-width: none; }
+        .chat-box .bottom .form-message .input-holder::-webkit-scrollbar {
+          display: none; }
+        .chat-box .bottom .form-message .input-holder textarea {
+          width: 100%;
+          height: 16px;
+          outline: none;
+          border: none;
+          padding: 0;
+          display: block;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+          color: white;
+          background: none;
+          border-radius: 0;
+          resize: none; }
+          .chat-box .bottom .form-message .input-holder textarea::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            color: rgba(255, 255, 255, 0.5); }
+      .chat-box .bottom .form-message .btn-send {
+        width: 22px;
+        height: 40px;
+        background: url("../image/btn-send.svg") no-repeat 50% 50%;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 0; }
+  .chat-box.chat-login .chat-content {
+    height: calc(100% - 215px); }
+  .chat-box.chat-login .balance {
+    display: none; }
+  .chat-box.chat-login .form-message {
+    display: flex; }
   .chat-box .chat-content {
     min-height: 100px;
     height: calc(100% - 266px);
@@ -1963,9 +2008,16 @@ header {
   margin-top: 20px; }
   .user-game.history-game .users-list {
     border-radius: 0; }
+  @media only screen and (max-width: 767px) {
+    .user-game.history-game .users-list,
+    .user-game.history-game .items-box {
+      display: none; } }
   .user-game.history-game.history-coin .game-head {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px; }
+  .user-game.history-game.history-coin .users-list,
+  .user-game.history-game.history-coin .items-box {
+    display: none; }
   .user-game.history-game .game-head {
     background: linear-gradient(180deg, #29ACD6 0%, #494FD8 100%);
     border-radius: 10px 10px 0px 0px;
@@ -1976,6 +2028,10 @@ header {
     @media only screen and (max-width: 767px) {
       .user-game.history-game .game-head {
         flex-direction: column; } }
+    @media only screen and (max-width: 767px) {
+      .user-game.history-game .game-head {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px; } }
     .user-game.history-game .game-head .item {
       width: 172px;
       position: relative; }
@@ -4728,7 +4784,7 @@ header {
       background: #CA3838; }
   .btn.btn-support {
     padding: 10px 20px;
-    display: none;
+    display: flex;
     align-items: center;
     position: absolute;
     bottom: 20px;
@@ -4736,9 +4792,9 @@ header {
     width: auto;
     justify-content: flex-start;
     text-align: left; }
-    @media only screen and (min-width: 1735px) {
+    @media only screen and (min-width: 991px) {
       .btn.btn-support {
-        display: flex; } }
+        display: none; } }
     @media only screen and (max-width: 767px) {
       .btn.btn-support {
         padding: 10px; } }
@@ -4842,6 +4898,8 @@ header {
       display: none; }
     .btn.btn-burger.active .close {
       display: block; }
+  .btn.btn-auto {
+    width: auto !important; }
 
 input,
 textarea,
@@ -4960,28 +5018,63 @@ label,
   border-radius: 25px;
   transition: all linear 0.4s; }
 
-.checkbox input {
-  display: none; }
-  .checkbox input:checked + label {
-    background: #BEC7AF; }
-  .checkbox input + label.error {
-    border: 2px solid red; }
-.checkbox label {
-  padding: 8px 20px;
-  margin: 0;
+.checkbox {
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  color: #2D2F36;
-  cursor: pointer;
-  border: 2px solid #828282;
-  border-radius: 20px;
-  transition: all linear 0.4s; }
+  margin-bottom: 30px;
+  position: relative; }
+  .checkbox input {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0; }
+    .checkbox input:checked + label::before {
+      display: block; }
+    .checkbox input.error + label.error {
+      display: none !important; }
+    .checkbox input label.error {
+      display: none !important; }
+    .checkbox input.error + label {
+      color: red; }
+  .checkbox label {
+    padding: 0 0 0 40px;
+    margin: 0;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    transition: all linear 0.4s;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF; }
+    .checkbox label a {
+      text-decoration: underline;
+      color: #5397FD; }
+      .checkbox label a:hover {
+        text-decoration: none; }
+    .checkbox label:after {
+      display: block;
+      width: 30px;
+      height: 30px;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px; }
+    .checkbox label::before {
+      display: none;
+      width: 30px;
+      height: 30px;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: url("../image/ico-check.svg") no-repeat 50% 50%; }
 
 .modal-backdrop {
   background: rgba(6, 11, 20, 0.75);
@@ -5014,7 +5107,9 @@ label,
     width: 24px;
     height: 24px;
     padding: 0;
-    min-height: 24px; }
+    min-height: 24px;
+    background: url("../image/ico-close.svg") no-repeat 50% 50%;
+    z-index: 10; }
     @media only screen and (max-width: 767px) {
       .modal .modal-content .btn-close {
         top: 20px;
@@ -5031,6 +5126,16 @@ label,
     @media only screen and (max-width: 991px) {
       .modal .modal-content .head {
         flex-wrap: wrap; } }
+    .modal .modal-content .head.head-column {
+      flex-direction: column;
+      padding-bottom: 30px;
+      margin-bottom: 30px; }
+    .modal .modal-content .head .head-text {
+      margin-top: 15px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: rgba(255, 255, 255, 0.5); }
     .modal .modal-content .head .number-ticket {
       display: none;
       width: 100%;
@@ -5108,7 +5213,8 @@ label,
   .modal .modal-content .skins-holder {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px 10px 0 0;
-    padding: 20px; }
+    padding: 20px;
+    min-height: 470px; }
     @media only screen and (max-width: 767px) {
       .modal .modal-content .skins-holder {
         padding: 10px; }
@@ -5300,6 +5406,9 @@ label,
 .modal .btn-apply {
   justify-content: center;
   width: 100%; }
+.modal .btn-holder {
+  display: flex;
+  justify-content: center; }
 
 .table {
   margin-bottom: 10px; }

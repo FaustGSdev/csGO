@@ -115,27 +115,62 @@ label,
   border-radius: 25px;
   transition: all linear 0.4s; }
 
-.checkbox input {
-  display: none; }
-  .checkbox input:checked + label {
-    background: #BEC7AF; }
-  .checkbox input + label.error {
-    border: 2px solid red; }
-.checkbox label {
-  padding: 8px 20px;
-  margin: 0;
+.checkbox {
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  color: #2D2F36;
-  cursor: pointer;
-  border: 2px solid #828282;
-  border-radius: 20px;
-  transition: all linear 0.4s; }
+  margin-bottom: 30px;
+  position: relative; }
+  .checkbox input {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0; }
+    .checkbox input:checked + label::before {
+      display: block; }
+    .checkbox input.error + label.error {
+      display: none !important; }
+    .checkbox input label.error {
+      display: none !important; }
+    .checkbox input.error + label {
+      color: red; }
+  .checkbox label {
+    padding: 0 0 0 40px;
+    margin: 0;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    transition: all linear 0.4s;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF; }
+    .checkbox label a {
+      text-decoration: underline;
+      color: #5397FD; }
+      .checkbox label a:hover {
+        text-decoration: none; }
+    .checkbox label:after {
+      display: block;
+      width: 30px;
+      height: 30px;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px; }
+    .checkbox label::before {
+      display: none;
+      width: 30px;
+      height: 30px;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: url("../image/ico-check.svg") no-repeat 50% 50%; }
 
 /*# sourceMappingURL=form.css.map */

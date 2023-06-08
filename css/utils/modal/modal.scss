@@ -38,6 +38,8 @@
             height: 24px;
             padding: 0;
             min-height: 24px;
+            background: url("../image/ico-close.svg") no-repeat 50% 50%;
+            z-index: 10;
             @media only screen and (max-width : $responsive-size-stand-mobile) {
                 top: 20px;
                 right: 20px;
@@ -55,6 +57,18 @@
             position: relative;
             @media only screen and (max-width : $responsive-size-big-tablet) {
                 flex-wrap: wrap;
+            }
+            &.head-column {
+                flex-direction: column;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+            }
+            .head-text {
+                margin-top: 15px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: rgba(255, 255, 255, 0.5);
             }
             .number-ticket {
                 display: none;
@@ -157,6 +171,7 @@
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px 10px 0 0;
             padding: 20px;
+            min-height: 470px;
             @media only screen and (max-width : $responsive-size-stand-mobile) {
                 padding: 10px;
                 .items-slider {
@@ -403,6 +418,10 @@
         //margin: 18px auto 0;
         justify-content: center;
         width: 100%;
+    }
+    .btn-holder {
+        display: flex;
+        justify-content: center;
     }
 
 }

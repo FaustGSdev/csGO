@@ -1,15 +1,15 @@
 @import "../../_helpers/variables";
 
-body.holder {
-  header {
-    position: initial;
-    z-index: initial;
-    .container {
-      position: initial;
-      z-index: initial;
-    }
-  }
-}
+//body.holder {
+//  header {
+//    position: initial;
+//    z-index: initial;
+//    .container {
+//      position: initial;
+//      z-index: initial;
+//    }
+//  }
+//}
 header {
   padding: 0;
   background: #131C2E;
@@ -518,10 +518,10 @@ header {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     margin-left: 5px;
-    padding: 0 20px;
+    padding: 0 5px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 40px;
     min-width: 175px;
     @media only screen and (max-width : $responsive-size-stand-mobile) {
@@ -546,7 +546,7 @@ header {
     .sum {
       display: flex;
       align-items: center;
-      font-weight: 700;
+      //font-weight: 700;
       font-size: 14px;
       line-height: 16px;
       color: #FFFFFF;

@@ -524,9 +524,16 @@
   margin-top: 20px; }
   .user-game.history-game .users-list {
     border-radius: 0; }
+  @media only screen and (max-width: 767px) {
+    .user-game.history-game .users-list,
+    .user-game.history-game .items-box {
+      display: none; } }
   .user-game.history-game.history-coin .game-head {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px; }
+  .user-game.history-game.history-coin .users-list,
+  .user-game.history-game.history-coin .items-box {
+    display: none; }
   .user-game.history-game .game-head {
     background: linear-gradient(180deg, #29ACD6 0%, #494FD8 100%);
     border-radius: 10px 10px 0px 0px;
@@ -537,6 +544,10 @@
     @media only screen and (max-width: 767px) {
       .user-game.history-game .game-head {
         flex-direction: column; } }
+    @media only screen and (max-width: 767px) {
+      .user-game.history-game .game-head {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px; } }
     .user-game.history-game .game-head .item {
       width: 172px;
       position: relative; }

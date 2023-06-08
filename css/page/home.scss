@@ -615,16 +615,20 @@
     .users-list {
       border-radius: 0;
     }
-    //.users-list,
-    //.items-box {
-    //  @media only screen and (max-width : $responsive-size-stand-mobile) {
-    //    display: none;
-    //  }
-    //}
+    .users-list,
+    .items-box {
+      @media only screen and (max-width : $responsive-size-stand-mobile) {
+        display: none;
+      }
+    }
     &.history-coin {
       .game-head {
         background: rgba(255, 255, 255, 0.05);
         border-radius: 10px;
+      }
+      .users-list,
+      .items-box {
+        display: none;
       }
     }
     .game-head {
@@ -636,6 +640,10 @@
       align-items: center;
       @media only screen and (max-width : $responsive-size-stand-mobile) {
         flex-direction: column;
+      }
+      @media only screen and (max-width : $responsive-size-stand-mobile) {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
       }
       .item {
         width: 172px;
